@@ -50,6 +50,9 @@ public class set_location extends AppCompatActivity implements OnMapReadyCallbac
         Button setLocationButton = findViewById(R.id.setLocation);
         setLocationButton.setOnClickListener(v -> setLocation());
 
+        Button checkInButton = findViewById(R.id.checkInButton);
+        checkInButton.setOnClickListener(v -> setLocation()); // checkInButton 클릭 시 setLocation() 호출
+
         Button completeLocationButton = findViewById(R.id.completeLocationButton);
         completeLocationButton.setOnClickListener(v -> completeLocation());
 
@@ -132,7 +135,7 @@ public class set_location extends AppCompatActivity implements OnMapReadyCallbac
 
     private void completeLocation() {
         if (targetLocation != null) {
-            Intent intent = new Intent(set_location.this, start_Routine.class);
+            Intent intent = new Intent(set_location.this, create_chall.class);
             intent.putExtra("latitude", targetLocation.latitude);
             intent.putExtra("longitude", targetLocation.longitude);
             startActivity(intent);

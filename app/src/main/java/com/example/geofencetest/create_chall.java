@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,6 +23,7 @@ public class create_chall extends AppCompatActivity {
     private Button btnComplete;
     private ImageButton set_location;
     private TextView gym_addr;
+    private double latitude, longitude;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,12 +50,9 @@ public class create_chall extends AppCompatActivity {
         spinnerGoal.setAdapter(goalAdapter);
 
         // 헬스장 위치 설정
-        set_location.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), set_location.class);
-                startActivityForResult(intent, REQUEST_CODE_SET_LOCATION);
-            }
+        set_location.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), set_location.class);
+            startActivityForResult(intent, REQUEST_CODE_SET_LOCATION);
         });
 
         // 년, 월, 일 스피너 설정
@@ -93,10 +90,7 @@ public class create_chall extends AppCompatActivity {
                     "시작 날짜: " + startDate + "\n" +
                     "종료 날짜: " + endDate, Toast.LENGTH_LONG).show();
 
-            // 위도와 경도 정보를 포함하여 start_Routine으로 인텐트를 전송
             Intent intent = new Intent(create_chall.this, start_Routine.class);
-            /*intent.putExtra("latitude", latitude);
-            intent.putExtra("longitude", longitude);*/
             startActivity(intent);
             finish();
         });
@@ -133,8 +127,8 @@ public class create_chall extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_CODE_SET_LOCATION && resultCode == RESULT_OK) {
             if (data != null && data.hasExtra("latitude") && data.hasExtra("longitude")) {
-                double latitude = data.getDoubleExtra("latitude", 0);
-                double longitude = data.getDoubleExtra("longitude", 0);
+                latitude = data.getDoubleExtra("latitude", 0);
+                longitude = data.getDoubleExtra("longitude", 0);
                 String locationText = "위도: " + latitude + ", 경도: " + longitude;
                 gym_addr.setText(locationText);
                 Toast.makeText(this, "위치가 설정되었습니다: " + locationText, Toast.LENGTH_SHORT).show();

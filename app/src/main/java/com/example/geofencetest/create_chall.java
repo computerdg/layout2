@@ -92,6 +92,13 @@ public class create_chall extends AppCompatActivity {
                     "내용: " + content + "\n" +
                     "시작 날짜: " + startDate + "\n" +
                     "종료 날짜: " + endDate, Toast.LENGTH_LONG).show();
+
+            // 위도와 경도 정보를 포함하여 start_Routine으로 인텐트를 전송
+            Intent intent = new Intent(create_chall.this, start_Routine.class);
+            /*intent.putExtra("latitude", latitude);
+            intent.putExtra("longitude", longitude);*/
+            startActivity(intent);
+            finish();
         });
     }
 

@@ -22,11 +22,11 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 
 public class set_location extends AppCompatActivity implements OnMapReadyCallback {
 
+    private boolean completeChecker;
     private GoogleMap mMap;
     private FusedLocationProviderClient fusedLocationClient;
     private LatLng targetLocation;
@@ -57,7 +57,7 @@ public class set_location extends AppCompatActivity implements OnMapReadyCallbac
         completeLocationButton.setOnClickListener(v -> completeLocation());
 
         // 초기 타겟 위치를 설정 (위도 35.934196, 경도 128.541147)
-        targetLocation = new LatLng(35.934196, 128.541147);
+        targetLocation = new LatLng(35.934196, 128.541147); // todo: 현재 위치 값으로 변경
     }
 
     @Override
@@ -74,6 +74,7 @@ public class set_location extends AppCompatActivity implements OnMapReadyCallbac
 
         // 현재 위치 표시 활성화
         mMap.setMyLocationEnabled(true);
+        completeChecker = false;
 
         // 초기 타겟 위치에 마커와 원 추가
         mMap.addMarker(new MarkerOptions().position(targetLocation).title("타겟 위치"));
@@ -102,7 +103,6 @@ public class set_location extends AppCompatActivity implements OnMapReadyCallbac
             updateCurrentLocationMarker();
         });
 
-        updateCurrentLocationMarker();
     }
 
     private void updateCurrentLocationMarker() {
@@ -118,6 +118,7 @@ public class set_location extends AppCompatActivity implements OnMapReadyCallbac
                             .position(currentLatLng)
                             .title("내 위치"));
                     mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 14));
+                    completeChecker = true;
                 } else {
                     Toast.makeText(set_location.this, "현재 위치를 확인할 수 없습니다.", Toast.LENGTH_SHORT).show();
                 }
@@ -134,8 +135,8 @@ public class set_location extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     private void completeLocation() {
-        if (targetLocation != null) {
-            Intent intent = new Intent(set_location.this, create_chall.class);
+        if (completeChecker) {
+            Intent intent = new Intent(set_location.this, start_Routine.class);
             intent.putExtra("latitude", targetLocation.latitude);
             intent.putExtra("longitude", targetLocation.longitude);
             startActivity(intent);

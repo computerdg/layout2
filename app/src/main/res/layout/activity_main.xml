@@ -12,24 +12,25 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_green_light"
         android:gravity="center"
         android:padding="16dp"
         android:text="Health Buddy"
+        android:textColor="@android:color/white"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:elevation="4dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/custom_background" />
 
-    <!-- 아이콘 메뉴 -->
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="32dp"
         android:layout_weight="1"
         android:columnCount="2"
         android:rowCount="3"
-        android:alignmentMode="alignMargins"
-        android:columnOrderPreserved="false"
-        android:layout_gravity="center">
+        android:padding="50dp"
+        android:rowGap="16dp"
+        android:columnGap="16dp">
 
         <!-- 운동 -->
         <Button
@@ -38,65 +39,81 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="15dp"
             android:text="운동"
             android:textSize="16sp"
-            android:onClick="openCreateChall"
-            android:background="@android:color/holo_blue_bright"
-            android:gravity="center" />
+            android:textColor="@android:color/white"
+            android:background="@drawable/custom_button"
+            android:gravity="center"/>
 
         <!-- 분석 -->
         <Button
+            android:id="@+id/btn_analysis"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="15dp"
             android:text="분석"
             android:textSize="16sp"
-            android:background="@android:color/holo_blue_bright"
-            android:gravity="center" />
+            android:textColor="@android:color/white"
+            android:background="@drawable/custom_button"
+            android:gravity="center"/>
 
         <!-- 커뮤니티 -->
         <Button
+            android:id="@+id/btn_community"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="15dp"
             android:text="커뮤니티"
             android:textSize="16sp"
-            android:background="@android:color/holo_blue_bright"
-            android:gravity="center" />
+            android:textColor="@android:color/white"
+            android:background="@drawable/custom_button"
+            android:gravity="center"/>
 
         <!-- 랭킹 -->
         <Button
+            android:id="@+id/btn_ranking"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
+            android:layout_margin="15dp"
             android:text="랭킹"
             android:textSize="16sp"
-            android:background="@android:color/holo_blue_bright"
-            android:gravity="center" />
+            android:textColor="@android:color/white"
+            android:background="@drawable/custom_button"
+            android:gravity="center"/>
 
         <!-- 운동 일지 -->
         <Button
+            android:id="@+id/btn_workout_log"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:text="운동 일지"
+            android:layout_margin="15dp"
+            android:text="운동일지"
             android:textSize="16sp"
-            android:background="@android:color/holo_blue_bright"
-            android:gravity="center" />
+            android:textColor="@android:color/white"
+            android:background="@drawable/custom_button"
+            android:gravity="center"/>
 
         <!-- QR 체크인 -->
         <Button
+            android:id="@+id/btn_qr_checkin"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:text="QR 체크인"
+            android:layout_margin="15dp"
+            android:text="QR Check"
             android:textSize="16sp"
-            android:background="@android:color/holo_blue_bright"
-            android:gravity="center" />
+            android:textColor="@android:color/white"
+            android:background="@drawable/custom_button"
+            android:gravity="center"/>
     </GridLayout>
 </LinearLayout>

@@ -1,0 +1,38 @@
+
+p
+java:S16045"(Make this anonymous inner class a lambda(Åƒ–äûÿÿÿÿ8ïÿç·ÿ1J$d96ed54d-e8ad-4ecd-95cd-98afc59d96dc
+	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(‹øè$8ïÿç·ÿ1J$babe9d53-bab8-474c-8f19-b0e8ed91497d
+s
+java:S1066€"/Merge this if statement with the enclosing one.(ÂÒñ8ğÿç·ÿ1J$755b7d0d-ebda-4bc7-bf6c-4dace5444a8b
+	java:S116"WRename this field "set_location" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÏò­şÿÿÿÿ8óÿç·ÿ1J$33ba7593-8500-4678-af19-4aeaefda3de4
+•	java:S116"SRename this field "gym_addr" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İŞì…8”Šò·ÿ1J$ec594164-cb74-489d-a7d4-eaf32bed4605
+–
+java:S1659"NDeclare "spinnerStartMonth" and all following declarations on a separate line.(’Ÿá¦üÿÿÿÿ8÷ÿç·ÿ1J$df847331-edbe-43a7-a989-5cd4b19b5341
+
+java:S1659"LDeclare "spinnerEndMonth" and all following declarations on a separate line.(–¥Ùm8÷ÿç·ÿ1J$e8aa758b-5a30-4310-9b53-8e20b8407b73
+
+java:S1450"ZRemove the "btnComplete" field and declare it as a local variable in the relevant methods.(Æë¥8÷ÿç·ÿ1J$1f1aad66-4649-496e-89cc-0145a2ce60a2
+©
+java:S1450"aRemove the "etChallengeContent" field and declare it as a local variable in the relevant methods.(®Íùÿÿÿÿ8÷ÿç·ÿ1J$310ac237-7a2a-486b-80e2-5bfbb62eb347
+§
+java:S1450"_Remove the "etChallengeTitle" field and declare it as a local variable in the relevant methods.(¸ìí’üÿÿÿÿ8÷ÿç·ÿ1J$cbbb668d-4eda-4dd6-8a96-d0072d96b688
+£
+java:S1450"[Remove the "set_location" field and declare it as a local variable in the relevant methods.(ùÏò­şÿÿÿÿ8÷ÿç·ÿ1J$6703ebac-3d66-454e-8f2b-e0a05b42b07a
+
+java:S1450"\Remove the "spinnerEndDay" field and declare it as a local variable in the relevant methods.(–¥Ùm8øÿç·ÿ1J$fcf99d74-ece1-4d7f-9cd6-d22b4119b696
+ 
+java:S1450"^Remove the "spinnerEndMonth" field and declare it as a local variable in the relevant methods.(–¥Ùm8øÿç·ÿ1J$6480cd49-29ad-4823-8af5-a5209e6c7ba5
+Ÿ
+java:S1450"]Remove the "spinnerEndYear" field and declare it as a local variable in the relevant methods.(–¥Ùm8øÿç·ÿ1J$f43d3bd3-c4b8-4864-9845-9fdcdc1b3418
+œ
+java:S1450"ZRemove the "spinnerGoal" field and declare it as a local variable in the relevant methods.(‰ËËr8øÿç·ÿ1J$8e744a13-2381-49c3-9161-c02648b4fe66
+¦
+java:S1450"^Remove the "spinnerStartDay" field and declare it as a local variable in the relevant methods.(’Ÿá¦üÿÿÿÿ8øÿç·ÿ1J$ff772001-8e25-40e3-b6b5-064c692ed09a
+¨
+java:S1450"`Remove the "spinnerStartMonth" field and declare it as a local variable in the relevant methods.(’Ÿá¦üÿÿÿÿ8øÿç·ÿ1J$bd2912ad-c427-44d6-b6c2-dbf7d72ac678
+§
+java:S1450"_Remove the "spinnerStartYear" field and declare it as a local variable in the relevant methods.(’Ÿá¦üÿÿÿÿ8øÿç·ÿ1J$691be04a-9507-4915-811b-7905c4d9c231
+
+java:S18749">Remove this use of "startActivityForResult"; it is deprecated.(×³¸Ô8…€è·ÿ1J$80405d11-6178-4026-8ba3-a764e1179e89
+
+java:S1874}"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(ŸŒ¹Ñ8‰€è·ÿ1J$807f5827-3107-45f6-b8b5-a3b5c070ca39

@@ -1,0 +1,29 @@
+
+p
+java:S1659"NDeclare "spinnerStartMonth" and all following declarations on a separate line.(’α¦όÿÿÿÿ8κλ›µÿ1
+h
+java:S1659"LDeclare "spinnerEndMonth" and all following declarations on a separate line.(–¥Ωm8λλ›µÿ1
+w
+java:S1450"ZRemove the "btnComplete" field and declare it as a local variable in the relevant methods.(Ζλ¥8λλ›µÿ1
+ƒ
+java:S1450"aRemove the "etChallengeContent" field and declare it as a local variable in the relevant methods.(®Νωÿÿÿÿ8λλ›µÿ1
+
+java:S1450"_Remove the "etChallengeTitle" field and declare it as a local variable in the relevant methods.(Έμν’όÿÿÿÿ8λλ›µÿ1
+x
+java:S1450"\Remove the "spinnerEndDay" field and declare it as a local variable in the relevant methods.(–¥Ωm8λλ›µÿ1
+z
+java:S1450"^Remove the "spinnerEndMonth" field and declare it as a local variable in the relevant methods.(–¥Ωm8λλ›µÿ1
+y
+java:S1450"]Remove the "spinnerEndYear" field and declare it as a local variable in the relevant methods.(–¥Ωm8λλ›µÿ1
+v
+java:S1450"ZRemove the "spinnerGoal" field and declare it as a local variable in the relevant methods.(‰ΛΛr8λλ›µÿ1
+€
+java:S1450"^Remove the "spinnerStartDay" field and declare it as a local variable in the relevant methods.(’α¦όÿÿÿÿ8λλ›µÿ1
+‚
+java:S1450"`Remove the "spinnerStartMonth" field and declare it as a local variable in the relevant methods.(’α¦όÿÿÿÿ8λλ›µÿ1
+
+java:S1450"_Remove the "spinnerStartYear" field and declare it as a local variable in the relevant methods.(’α¦όÿÿÿÿ8μλ›µÿ1
+V
+java:S1068"4Remove this unused "etChallengeTitle" private field.(Έμν’όÿÿÿÿ8μ›µÿ1
+X
+java:S1068"6Remove this unused "etChallengeContent" private field.(®Νωÿÿÿÿ8μ›µÿ1

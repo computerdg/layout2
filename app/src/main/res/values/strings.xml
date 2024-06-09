@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">geofence test</string>
+    <string-array name="goal_array">
+        <item>근비대</item>
+        <item>근지구력 향상</item>
+        <item>다이어트</item>
+        <item>건강 유지</item>
+        <item>재활</item>
+    </string-array>
+</resources>

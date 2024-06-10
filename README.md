@@ -2,7 +2,7 @@
 * 지오펜스 api 사용 안하고 구글맵 api로 동일한 기능 가능하도록 함 -> 위도, 경도 값 넘겨서 출석 기능까지 됨 -> 위도, 경도 저장 테이블 백에서 만들어서 출석 시스템 하면 될듯
 * 반경 범위 최소로 설정 가능
 * 아직 완성은 아니고 대충 기능은 비슷하게 해둠
-* 각자 구글맵 api 키 발급하시고 manifests -> AndroidManifest.xml 파일에 젤 아래쪽 android:value="" 에 각자 키 넣고 사용하시면 됩니다.
+* 각자 구글맵 api 키 발급하시고 manifests -> AndroidManifest.xml 파일에 젤 아래쪽 android:value="" 에 각자 키 넣고 사용하시면 됩니다. (패키지명 : com.example.geofencetest)
 * Android SDK 에서 Google Play services 설치하셔야 사용가능
   
   ## 사용법

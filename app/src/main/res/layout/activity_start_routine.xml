@@ -5,14 +5,53 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".start_Routine"
-    android:gravity="center">
+    android:gravity="center"
+    android:padding="16dp">
 
-    <Button
+    <!-- 오늘의 루틴 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/box_background"
+        android:padding="16dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_routine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오늘의 루틴"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+
+        <!-- 루틴 내용 -->
+        <TextView
+            android:id="@+id/tv_routine_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="벤치프레스 10회 x 4set\n스쿼트 15회 x 5set"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- 운동 시작 버튼 -->
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_startRoutine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="운동 시작"
-        android:textSize="30dp" />
-
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:layout_marginTop="32dp" />
 </LinearLayout>

@@ -33,6 +33,7 @@ public class set_location extends AppCompatActivity implements OnMapReadyCallbac
     private Marker currentLocationMarker;
     private final float RADIUS_IN_METERS = 300;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
+    private boolean checkInSuccess = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,17 +48,36 @@ public class set_location extends AppCompatActivity implements OnMapReadyCallbac
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
-        Button checkInButton = findViewById(R.id.checkInButton);
-        checkInButton.setOnClickListener(v -> checkIn());
-
         Button setLocationButton = findViewById(R.id.setLocation);
         setLocationButton.setOnClickListener(v -> setLocation());
+
+        Button checkInButton = findViewById(R.id.checkInButton);
+        checkInButton.setOnClickListener(v -> checkIn());
 
         Button completeLocationButton = findViewById(R.id.completeLocationButton);
         completeLocationButton.setOnClickListener(v -> completeLocation());
 
-        // 초기 타겟 위치를 설정 (위도 35.934196, 경도 128.541147)
-        targetLocation = new LatLng(35.934196, 128.541147);
+        // 사용자의 현재 위치 가져오기
+        getCurrentLocation();
+    }
+
+    private void getCurrentLocation() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION},
+                    LOCATION_PERMISSION_REQUEST_CODE);
+            return;
+        }
+
+        Task<Location> locationTask = fusedLocationClient.getLastLocation();
+        locationTask.addOnSuccessListener(this, location -> {
+            if (location != null) {
+                targetLocation = new LatLng(location.getLatitude(), location.getLongitude());
+                updateMap();
+            } else {
+                Toast.makeText(set_location.this, "현재 위치를 확인할 수 없습니다.", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
@@ -76,34 +96,29 @@ public class set_location extends AppCompatActivity implements OnMapReadyCallbac
         mMap.setMyLocationEnabled(true);
 
         // 초기 타겟 위치에 마커와 원 추가
-        mMap.addMarker(new MarkerOptions().position(targetLocation).title("타겟 위치"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(targetLocation, 14));
+        updateMap();
 
-        // 확대/축소 버튼 활성화
         mMap.getUiSettings().setZoomControlsEnabled(true);
 
-        // 반경 300미터 원 그리기
+        // 지도 클릭 리스너 설정
+        mMap.setOnMapClickListener(latLng -> {
+            targetLocation = latLng;
+            updateMap();
+            updateCurrentLocationMarker();
+        });
+    }
+
+    private void updateMap() {
+        if (mMap == null || targetLocation == null) return;
+
+        mMap.clear();
+        mMap.addMarker(new MarkerOptions().position(targetLocation).title("타겟 위치"));
         mMap.addCircle(new CircleOptions()
                 .center(targetLocation)
                 .radius(RADIUS_IN_METERS)
                 .strokeColor(0x220000FF)
                 .fillColor(0x220000FF));
-
-        // 지도 클릭 리스너 설정
-        mMap.setOnMapClickListener(latLng -> {
-            targetLocation = latLng;
-            mMap.clear();
-            mMap.addMarker(new MarkerOptions().position(targetLocation).title("타겟 위치"));
-            mMap.addCircle(new CircleOptions()
-                    .center(targetLocation)
-                    .radius(RADIUS_IN_METERS)
-                    .strokeColor(0x220000FF)
-                    .fillColor(0x220000FF));
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(targetLocation, 14));
-            updateCurrentLocationMarker();
-        });
-
-        updateCurrentLocationMarker();
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(targetLocation, 14));
     }
 
     private void updateCurrentLocationMarker() {
@@ -120,7 +135,7 @@ public class set_location extends AppCompatActivity implements OnMapReadyCallbac
                             .title("내 위치"));
                     mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 14));
                 } else {
-                    Toast.makeText(set_location.this, "현재 위치를 확인할 수 없습니다.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(set_location.this, "현재 위치 확인 불가", Toast.LENGTH_SHORT).show();
                 }
             });
         }
@@ -128,7 +143,7 @@ public class set_location extends AppCompatActivity implements OnMapReadyCallbac
 
     private void setLocation() {
         if (targetLocation != null) {
-            Toast.makeText(set_location.this, "위치가 설정되었습니다.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(set_location.this, "헬스장 위치가 설정되었습니다.", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(set_location.this, "지도를 클릭하여 위치를 설정하세요.", Toast.LENGTH_SHORT).show();
         }
@@ -139,10 +154,11 @@ public class set_location extends AppCompatActivity implements OnMapReadyCallbac
             Intent intent = new Intent();
             intent.putExtra("latitude", targetLocation.latitude);
             intent.putExtra("longitude", targetLocation.longitude);
+            intent.putExtra("checkInSuccess", checkInSuccess);
             setResult(RESULT_OK, intent);
             finish();
         } else {
-            Toast.makeText(set_location.this, "지도를 클릭하여 위치를 설정하세요.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(set_location.this, "헬스장 위치를 지정해주세요", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -156,8 +172,10 @@ public class set_location extends AppCompatActivity implements OnMapReadyCallbac
                             targetLocation.latitude, targetLocation.longitude, distance);
                     if (distance[0] <= RADIUS_IN_METERS) {
                         Toast.makeText(set_location.this, "출석 인증 성공", Toast.LENGTH_SHORT).show();
+                        checkInSuccess = true;
                     } else {
                         Toast.makeText(set_location.this, "출석 인증 실패: 반경 내에 있지 않습니다.", Toast.LENGTH_SHORT).show();
+                        checkInSuccess = false;
                     }
                 } else if (targetLocation == null) {
                     Toast.makeText(set_location.this, "먼저 위치를 설정하세요.", Toast.LENGTH_SHORT).show();
@@ -179,7 +197,6 @@ public class set_location extends AppCompatActivity implements OnMapReadyCallbac
                     mMap.setMyLocationEnabled(true);
                     updateCurrentLocationMarker();
                 }
-                checkIn();
             } else {
                 Toast.makeText(this, "위치 권한이 필요합니다.", Toast.LENGTH_SHORT).show();
             }

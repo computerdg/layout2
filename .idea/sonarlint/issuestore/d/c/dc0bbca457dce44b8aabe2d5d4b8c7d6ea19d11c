@@ -1,0 +1,13 @@
+
+	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(“àğš8Ïâß‹€2J$0ca68f5d-a273-46ac-8468-d016482a84b0
+|	java:S116"[Rename this field "RADIUS_IN_METERS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’â…óûÿÿÿÿ8Ç©Œ€2
+C
+java:S1170"!Make this final field static too.(’â…óûÿÿÿÿ8Ë©Œ€2
+u
+java:S1659"-Declare "targetLongitude" on a separate line.(ª¿©²ùÿÿÿÿ8Öâß‹€2J$b18a71d2-9a2b-4681-a7ab-e2c811f1ed38
+z
+java:S1450"]Remove the "checkInSuccess" field and declare it as a local variable in the relevant methods.(ÍÁƒ÷8Ì©Œ€2
+Ÿ
+java:S32525"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(îÄ¤¸üÿÿÿÿ8Şâß‹€2J$de216b7b-a485-4842-852d-04e2a4bdd79c
+’
+java:S1874N"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(Ó»×¶şÿÿÿÿ8ââß‹€2J$f4ccf767-57a2-448a-be8f-191e3991536c

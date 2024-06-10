@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,6 +23,8 @@ public class create_chall extends AppCompatActivity {
     private Button btnComplete;
     private ImageButton set_location;
     private TextView gym_addr;
+    private double latitude, longitude;
+    private boolean checkInSuccess;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,12 +51,9 @@ public class create_chall extends AppCompatActivity {
         spinnerGoal.setAdapter(goalAdapter);
 
         // 헬스장 위치 설정
-        set_location.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), set_location.class);
-                startActivityForResult(intent, REQUEST_CODE_SET_LOCATION);
-            }
+        set_location.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), set_location.class);
+            startActivityForResult(intent, REQUEST_CODE_SET_LOCATION);
         });
 
         // 년, 월, 일 스피너 설정
@@ -86,12 +84,24 @@ public class create_chall extends AppCompatActivity {
                     spinnerEndMonth.getSelectedItem().toString() + "-" +
                     spinnerEndDay.getSelectedItem().toString();
 
-            Toast.makeText(this, "챌린지 생성 완료\n" +
-                    "제목: " + title + "\n" +
-                    "목표: " + goal + "\n" +
-                    "내용: " + content + "\n" +
-                    "시작 날짜: " + startDate + "\n" +
-                    "종료 날짜: " + endDate, Toast.LENGTH_LONG).show();
+            if (title.isEmpty() || content.isEmpty() || goal.isEmpty() ||
+                    startDate.isEmpty() || endDate.isEmpty() || latitude == 0 || longitude == 0) {
+                Toast.makeText(this, "모든 정보를 입력해주세요", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "챌린지 생성 완료\n" +
+                        "제목: " + title + "\n" +
+                        "목표: " + goal + "\n" +
+                        "내용: " + content + "\n" +
+                        "시작 날짜: " + startDate + "\n" +
+                        "종료 날짜: " + endDate, Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(create_chall.this, start_Routine.class);
+                intent.putExtra("latitude", latitude);
+                intent.putExtra("longitude", longitude);
+                intent.putExtra("checkInSuccess", checkInSuccess);
+                startActivity(intent);
+                finish();
+            }
         });
     }
 
@@ -126,8 +136,9 @@ public class create_chall extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_CODE_SET_LOCATION && resultCode == RESULT_OK) {
             if (data != null && data.hasExtra("latitude") && data.hasExtra("longitude")) {
-                double latitude = data.getDoubleExtra("latitude", 0);
-                double longitude = data.getDoubleExtra("longitude", 0);
+                latitude = data.getDoubleExtra("latitude", 0);
+                longitude = data.getDoubleExtra("longitude", 0);
+                checkInSuccess = data.getBooleanExtra("checkInSuccess", false);
                 String locationText = "위도: " + latitude + ", 경도: " + longitude;
                 gym_addr.setText(locationText);
                 Toast.makeText(this, "위치가 설정되었습니다: " + locationText, Toast.LENGTH_SHORT).show();

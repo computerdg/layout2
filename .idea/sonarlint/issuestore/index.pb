@@ -62,3 +62,5 @@ Q.idea/sonarlint/securityhotspotstore/d/b/dbcff70658daf80b53ce624f6adcaa529df5ed
 Q.idea/sonarlint/securityhotspotstore/4/4/440f9d3e07346480cc4f2af5173d97eceaa05de7,2\8\28defadfaa8380a8cd9a4d86f1c11bf781a9c1eb
 Å
 Q.idea/sonarlint/securityhotspotstore/3/b/3ba116444b8c6b1246531cca65a5d1f19175fa4a,0\5\05f0636dfbb8665b5d181f2df1ff9f70403f3bec
+@
+local.properties,0\7\0712df971a99ac4d2fccb8e0fb19f377f3374cca

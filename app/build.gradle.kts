@@ -1,10 +1,13 @@
+
 plugins {
     alias(libs.plugins.android.application)
 }
 
+
 android {
     namespace = "com.example.geofencetest"
     compileSdk = 34
+
 
     defaultConfig {
         applicationId = "com.example.geofencetest"
@@ -14,6 +17,8 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+
     }
 
     buildTypes {

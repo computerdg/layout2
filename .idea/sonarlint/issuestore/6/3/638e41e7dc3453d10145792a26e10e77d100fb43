@@ -1,42 +1,42 @@
 
-Ž	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(‹øè$8ïÿç·ÿ1J$b441158e-9804-4d3d-b56c-63d44a8a320b
+Ž	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(‹øè$8ïÿç·ÿ1J$be814a99-33df-4b99-9bf7-55dde9c75a32
 s
-java:S1066Š"/Merge this if statement with the enclosing one.(žÂÒñ8ªÀŽŒ€2J$440471f3-b374-4e0e-a1ce-88d34d4570cc
+java:S1066Š"/Merge this if statement with the enclosing one.(žÂÒñ8ªÀŽŒ€2J$6b01529d-bd68-4175-b096-8b0e43ad6f7d
 ‘
-java:S1192c"IDefine a constant instead of duplicating this literal "latitude" 3 times.(´ªžŽøÿÿÿÿ8­ÀŽŒ€2J$67495aec-0300-429c-9966-3879b198418b
+java:S1192c"IDefine a constant instead of duplicating this literal "latitude" 3 times.(´ªžŽøÿÿÿÿ8­ÀŽŒ€2J$7671ff72-4cc7-4c75-94d3-a5bf2f2fcc60
 
-java:S1192d"JDefine a constant instead of duplicating this literal "longitude" 3 times.(Š¿õ8®ÀŽŒ€2J$2c4ceeae-ad7d-48fa-902e-06333f00ee3b
-ž	java:S116"WRename this field "set_location" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÏò­þÿÿÿÿ8óÿç·ÿ1J$7e7cf56b-c69c-4e4f-85db-bd0d3640c808
-•	java:S116"SRename this field "gym_addr" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÝÞì…8”Šò·ÿ1J$4c4ca7cd-d751-4b26-ace0-c433f8d39620
+java:S1192d"JDefine a constant instead of duplicating this literal "longitude" 3 times.(Š¿õ8®ÀŽŒ€2J$f71f3ce0-78e3-4924-b399-758fe14f8101
+ž	java:S116"WRename this field "set_location" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÏò­þÿÿÿÿ8óÿç·ÿ1J$f79748ca-cd96-4ac5-bb30-93e4dfee387b
+•	java:S116"SRename this field "gym_addr" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÝÞì…8”Šò·ÿ1J$6ab93af7-1d72-44bf-b0d6-d50496710759
 –
-java:S1659"NDeclare "spinnerStartMonth" and all following declarations on a separate line.(’Ÿá¦üÿÿÿÿ8÷ÿç·ÿ1J$d84f3ccd-820b-4eea-8e97-94b8653458ea
+java:S1659"NDeclare "spinnerStartMonth" and all following declarations on a separate line.(’Ÿá¦üÿÿÿÿ8÷ÿç·ÿ1J$08130213-cc5a-4cf7-a5a3-ece7474e3458
 Ž
-java:S1659"LDeclare "spinnerEndMonth" and all following declarations on a separate line.(–¥Ùm8÷ÿç·ÿ1J$934b67ef-fe43-4a8c-bfde-dbc55a06162f
+java:S1659"LDeclare "spinnerEndMonth" and all following declarations on a separate line.(–¥Ùm8÷ÿç·ÿ1J$1176b9a0-e064-4443-8416-2ecc6925899e
 o
-java:S1659"'Declare "longitude" on a separate line.(åÀ¤ýÿÿÿÿ8ýÁ¢‹€2J$217833dc-451a-4f14-8bbc-3d4965ffebaf
+java:S1659"'Declare "longitude" on a separate line.(åÀ¤ýÿÿÿÿ8ýÁ¢‹€2J$0d187a20-eb6b-400b-8236-818da49b0423
 
-java:S1450"ZRemove the "btnComplete" field and declare it as a local variable in the relevant methods.(Æë¥8÷ÿç·ÿ1J$546e639e-ca27-4d10-8ec5-a1ab7e16a774
+java:S1450"ZRemove the "btnComplete" field and declare it as a local variable in the relevant methods.(Æë¥8÷ÿç·ÿ1J$cbe29576-94df-4261-823a-a831b90d1550
 ©
-java:S1450"aRemove the "etChallengeContent" field and declare it as a local variable in the relevant methods.(ž®Íùÿÿÿÿ8÷ÿç·ÿ1J$d43a7cbd-61ec-475e-94c1-5f511a4d0e50
+java:S1450"aRemove the "etChallengeContent" field and declare it as a local variable in the relevant methods.(ž®Íùÿÿÿÿ8÷ÿç·ÿ1J$1104e5b7-7ee8-4e76-85f5-7ec179b10e6f
 §
-java:S1450"_Remove the "etChallengeTitle" field and declare it as a local variable in the relevant methods.(¸ìí’üÿÿÿÿ8÷ÿç·ÿ1J$f6c65bbd-2258-486b-8098-343324464f39
+java:S1450"_Remove the "etChallengeTitle" field and declare it as a local variable in the relevant methods.(¸ìí’üÿÿÿÿ8÷ÿç·ÿ1J$e1f28540-ce71-4c0e-81a3-b080d012ddc5
 £
-java:S1450"[Remove the "set_location" field and declare it as a local variable in the relevant methods.(ùÏò­þÿÿÿÿ8÷ÿç·ÿ1J$bed62af8-ecdc-460f-9104-d98512b5df21
+java:S1450"[Remove the "set_location" field and declare it as a local variable in the relevant methods.(ùÏò­þÿÿÿÿ8÷ÿç·ÿ1J$9a35744c-bf84-4838-8c25-4557ebf3213a
 ž
-java:S1450"\Remove the "spinnerEndDay" field and declare it as a local variable in the relevant methods.(–¥Ùm8øÿç·ÿ1J$8c00166c-7939-4e76-a082-a85826b70070
+java:S1450"\Remove the "spinnerEndDay" field and declare it as a local variable in the relevant methods.(–¥Ùm8øÿç·ÿ1J$4ff70e1b-7565-48c5-b6e2-1da184322a7a
  
-java:S1450"^Remove the "spinnerEndMonth" field and declare it as a local variable in the relevant methods.(–¥Ùm8øÿç·ÿ1J$21846235-0dc2-4aee-a690-555b11f87ca0
+java:S1450"^Remove the "spinnerEndMonth" field and declare it as a local variable in the relevant methods.(–¥Ùm8øÿç·ÿ1J$97346d99-03e4-4874-9f5c-23679e6530b3
 Ÿ
-java:S1450"]Remove the "spinnerEndYear" field and declare it as a local variable in the relevant methods.(–¥Ùm8øÿç·ÿ1J$dcec1223-e1a8-4858-8148-e30ec27bf1df
+java:S1450"]Remove the "spinnerEndYear" field and declare it as a local variable in the relevant methods.(–¥Ùm8øÿç·ÿ1J$1bbfdcae-8b50-4f8a-acb1-39171ecaafbf
 œ
-java:S1450"ZRemove the "spinnerGoal" field and declare it as a local variable in the relevant methods.(‰ËËr8øÿç·ÿ1J$241f783d-5403-4d5d-971e-7de04cae567c
+java:S1450"ZRemove the "spinnerGoal" field and declare it as a local variable in the relevant methods.(‰ËËr8øÿç·ÿ1J$7bf8ded9-c2ad-4a41-9c63-66dc85dedea3
 ¦
-java:S1450"^Remove the "spinnerStartDay" field and declare it as a local variable in the relevant methods.(’Ÿá¦üÿÿÿÿ8øÿç·ÿ1J$9912460d-4bbf-4197-b4f4-8a0a2913d7bd
+java:S1450"^Remove the "spinnerStartDay" field and declare it as a local variable in the relevant methods.(’Ÿá¦üÿÿÿÿ8øÿç·ÿ1J$a593afa1-d189-477a-9213-f3772bd23609
 ¨
-java:S1450"`Remove the "spinnerStartMonth" field and declare it as a local variable in the relevant methods.(’Ÿá¦üÿÿÿÿ8øÿç·ÿ1J$1243bd5e-21e9-498d-a8e7-a063235df8ba
+java:S1450"`Remove the "spinnerStartMonth" field and declare it as a local variable in the relevant methods.(’Ÿá¦üÿÿÿÿ8øÿç·ÿ1J$7ace2afa-b7d8-4cc5-b0f9-196828b70d1d
 §
-java:S1450"_Remove the "spinnerStartYear" field and declare it as a local variable in the relevant methods.(’Ÿá¦üÿÿÿÿ8øÿç·ÿ1J$b5bcb991-08a4-4869-bd54-d695b5fd819b
+java:S1450"_Remove the "spinnerStartYear" field and declare it as a local variable in the relevant methods.(’Ÿá¦üÿÿÿÿ8øÿç·ÿ1J$0f744193-e6a4-48d4-8760-b83da12dfc17
 
-java:S18748">Remove this use of "startActivityForResult"; it is deprecated.(×³¸Ô8ÏÀŽŒ€2J$2b7e53ef-b845-4adb-a44b-0eb8a579633c
+java:S18748">Remove this use of "startActivityForResult"; it is deprecated.(×³¸Ô8ÏÀŽŒ€2J$061ab622-3b6a-40e7-bde3-101663eda039
 Ž
-java:S1874‡"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(ŸŒ¹Ñ8ÔÀŽŒ€2J$5a02b4d9-5989-4cf0-8265-d3fbaf95defc
+java:S1874‡"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(ŸŒ¹Ñ8ÔÀŽŒ€2J$bbb6011d-09cf-4c9d-87ca-36f0a4b6a901

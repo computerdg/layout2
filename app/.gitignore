@@ -93,8 +93,6 @@ obj/
 .idea/jarRepositories.xml
 .idea/navEditor.xml
 
-# google map api_key 파일 경로 ignore 추가
-app/src/main/res/values/key.xml
 
 
 # Legacy Eclipse project files

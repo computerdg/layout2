@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:layout_margin="10dp">
 
     <!--<SearchView
         android:id="@+id/place_search"
@@ -15,8 +16,7 @@
     <fragment
         android:id="@+id/map"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="600dp"
         android:name="com.google.android.gms.maps.SupportMapFragment"/>
 
     <LinearLayout
@@ -27,21 +27,14 @@
 
         <Button
             android:id="@+id/setLocation"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="위치 설정" />
+            android:layout_marginTop="11dp"
+            android:gravity="center"
+            android:text="헬스장 지정 완료"
+            android:textSize="20sp"
+            android:backgroundTint="@android:color/holo_blue_light" />
 
-        <Button
-            android:id="@+id/checkInButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="출석 체크" />
-
-        <Button
-            android:id="@+id/completeLocationButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="완료" />
     </LinearLayout>
 
 </LinearLayout>

@@ -1,21 +1,19 @@
 
-”	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(­Óíøÿÿÿÿ8ŠƒÏ‹€2J$6f927667-ef76-4183-a6ae-11c15fc6f29a
-	java:S116""[Rename this field "RADIUS_IN_METERS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ŒõÍ8ƒÏ‹€2J$c62e97d8-ee31-40a0-89bf-db2edb19d279
+”	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(­Óíøÿÿÿÿ8Á¸ÿ¡ƒ2J$b722eeaa-ef52-4316-a57a-b8b2f68a30f0
+	java:S116""[Rename this field "RADIUS_IN_METERS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ŒõÍ8Æ¸ÿ¡ƒ2J$b8d1e0c7-db7a-44b4-8934-cb77854ef9ba
 d
-java:S1170""!Make this final field static too.(·ŒõÍ8”ƒÏ‹€2J$33cee469-55ea-4e35-887e-37f5887940f9
+java:S1170""!Make this final field static too.(·ŒõÍ8É¸ÿ¡ƒ2J$24b4d75e-89ef-48f2-9197-c62841965ca7
 Ÿ
-java:S3252A"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(»¤è«ıÿÿÿÿ8²ƒÏ‹€2J$0974798c-6d4e-4b43-a4f5-4b075edb2d75
+java:S3252;"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(»¤è«ıÿÿÿÿ8¹Åõ¡ƒ2J$ac7fce2c-2d91-40f8-a226-6a199bef0676
 š
-java:S3252B"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(§Ú¶8Ö¿ŠŒ€2J$12de5868-8ce3-46a0-94f0-eca649035ea1
+java:S3252<"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(§Ú¶8Ó¸ÿ¡ƒ2J$e8128db3-e41e-4480-b743-c103957bd52a
 Ÿ
-java:S3252X"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(»¤è«ıÿÿÿÿ8Ù¿ŠŒ€2J$335d7176-7a5b-4ba2-885a-f45adac4e7ec
+java:S3252R"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(»¤è«ıÿÿÿÿ8Õ¸ÿ¡ƒ2J$9e18f263-a245-4d5c-8078-c5ba36bec28b
 š
-java:S3252Y"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(§Ú¶8Ú¿ŠŒ€2J$0d63b5f5-a4cc-4c32-ada8-3b207778c37e
-Ÿ
-java:S3252}"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(îÄ¤¸üÿÿÿÿ8Ş¿ŠŒ€2J$a1497993-43ca-4a25-a021-a2af53a4f2d3
- 
-java:S3252¦"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(îÄ¤¸üÿÿÿÿ8ç¿ŠŒ€2J$8e237bde-b415-4db4-8e19-ee237b4aeb04
+java:S3252S"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(§Ú¶8Õ¸ÿ¡ƒ2J$5cb7f4a1-9e72-4539-96a0-c8d3a7f5b755
 “
-java:S1874À"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(Ó»×¶şÿÿÿÿ8–ÃŠ‹€2J$f3b2118d-2e90-4cc2-a0d2-310e644f71f2
+java:S1874‚"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(Ó»×¶şÿÿÿÿ8„ğ¾¦ƒ2J$6b889a68-1fa9-4f38-8bd0-68fe629b5ed6
  
-java:S3252Ä"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(îÄ¤¸üÿÿÿÿ8ê¿ŠŒ€2J$159c30f4-2bd4-4ec7-a4b7-6f50aedfcebd
+java:S3252†"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(îÄ¤¸üÿÿÿÿ8„ğ¾¦ƒ2J$5b75a385-0505-4934-b1cf-b8e5defdb62f
+|
+java:S1068!"9Remove this unused "currentLocationMarker" private field.(ˆÓğ©8Ãœ½£ƒ2J$56f31c98-3e6e-43a5-b437-f5724dfb5372

@@ -1,7 +1,7 @@
 
-J
-java:S1604"(Make this anonymous inner class a lambda(π«ψÿÿÿÿ8ίύθ€2
-n	java:S101
-"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ΰΌ•ƒόÿÿÿÿ8ίύθ€2
-z
-java:S1450"]Remove the "completeButton" field and declare it as a local variable in the relevant methods.(Κθώ™8ούθ€2
+p
+java:S1604"(Make this anonymous inner class a lambda(π«ψÿÿÿÿ8ίύθ€2J$8e3c1190-7a1a-4dd3-b8f6-f194c0266409
+”	java:S101
+"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ΰΌ•ƒόÿÿÿÿ8ίύθ€2J$61cf22d6-81e6-4075-ad06-74866719649a
+ 
+java:S1450"]Remove the "completeButton" field and declare it as a local variable in the relevant methods.(Κθώ™8ούθ€2J$8f949b0f-2311-4709-84e5-87bcf94fd27f

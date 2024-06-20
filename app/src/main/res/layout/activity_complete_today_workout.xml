@@ -57,7 +57,7 @@
             android:id="@+id/weightLiftedTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="오늘 들어올린 무게"
+            android:text="오늘의 보상"
             android:textSize="16sp"
             android:textColor="#66d7d7"
             android:layout_below="@id/dateTextView"
@@ -68,7 +68,7 @@
             android:id="@+id/weightLiftedValueTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="215 kcal"
+            android:text="랭킹 포인트 5점 획득"
             android:textSize="16sp"
             android:textColor="#000000"
             android:layout_below="@id/weightLiftedTextView"
@@ -89,7 +89,7 @@
             android:id="@+id/caloriesBurnedValueTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="45kg"
+            android:text="624 kcal"
             android:textSize="16sp"
             android:textColor="#000000"
             android:layout_below="@id/caloriesBurnedTextView"
@@ -133,6 +133,7 @@
             android:layout_height="100dp"
             android:layout_below="@id/feedbackTextView"
             android:background="#EEEEEE"
+            android:text="1. 벤치 70kg -> 80kg 증량 성공\n2. 스쿼트 자세 다시 복습\n3. 러닝머신 시간 늘리기"
             android:padding="8dp"/>
     </RelativeLayout>
 

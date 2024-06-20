@@ -68,3 +68,17 @@ u
 Eapp/src/main/java/com/example/geofencetest/complete_todayWorkout.java,0\3\03540a083c9477dc0507cf51488b9c2bd233f193
 m
 =app/src/main/java/com/example/geofencetest/start_Routine.java,d\c\dc0bbca457dce44b8aabe2d5d4b8c7d6ea19d11c
+u
+Eapp/src/main/java/com/example/geofencetest/check_currentLocation.java,e\0\e0012f40abf4e45a68d135266aa2ec71c91b3361
+j
+:app/src/main/java/com/example/geofencetest/chall_list.java,4\a\4a363159422198f8a153bed93d6c6873b6222223
+o
+?app/src/main/java/com/example/geofencetest/chall_list_item.java,e\d\edfc107ec3b174311be58d112a5b6c319efd47d0
+q
+Aapp/src/main/java/com/example/geofencetest/ChallListActivity.java,1\f\1f39dd04cf418ce71e9368f592470b91fb5359b4
+i
+9app/src/main/java/com/example/geofencetest/Challenge.java,4\2\4206a7468c3aae48c4560177d9e10cb1940fa0de
+p
+@app/src/main/java/com/example/geofencetest/ChallengeAdapter.java,f\0\f01d29d29e5bccf8d67ab2d372efe2b124edfe90
+o
+?app/src/main/java/com/example/geofencetest/challList_proto.java,6\7\675de68013aba16c24d779ae2dd34cedd4c7bac0

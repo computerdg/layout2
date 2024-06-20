@@ -144,7 +144,7 @@ public class create_chall extends AppCompatActivity {
                 latitude = data.getDoubleExtra("latitude", 0);
                 longitude = data.getDoubleExtra("longitude", 0);
                 String locationText = "위도: " + latitude + ", 경도: " + longitude;
-                gym_addr.setText(locationText);
+                gym_addr.setText("헬스장 지정 완료!!");
 
                 Toast.makeText(this, "위치가 설정되었습니다: " + locationText, Toast.LENGTH_SHORT).show();
             }

@@ -14,16 +14,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button btn_workout = (Button) findViewById(R.id.btn_workout);
-        Button btn_analysis = (Button) findViewById(R.id.btn_analysis);
+        Button btn_ranking = (Button) findViewById(R.id.btn_ranking);
 
+        // 운동
         btn_workout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), challList_proto.class);
                 startActivity(intent);
             }
+        });
 
-
+        // 랭킹
+        btn_ranking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ranking.class);
+                startActivity(intent);
+            }
         });
     }
 }

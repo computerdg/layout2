@@ -82,3 +82,7 @@ p
 @app/src/main/java/com/example/geofencetest/ChallengeAdapter.java,f\0\f01d29d29e5bccf8d67ab2d372efe2b124edfe90
 o
 ?app/src/main/java/com/example/geofencetest/challList_proto.java,6\7\675de68013aba16c24d779ae2dd34cedd4c7bac0
+g
+7app/src/main/java/com/example/geofencetest/ranking.java,6\6\6615aaec53e084b43cff8df71daf16922e00cef7
+k
+;app/src/main/java/com/example/geofencetest/set_routine.java,0\1\014fbf86a04e55d16970b05855ffd97be5939399

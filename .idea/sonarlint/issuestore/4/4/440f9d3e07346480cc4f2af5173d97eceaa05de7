@@ -1,9 +1,7 @@
 
 k
-java:S1604"(Make this anonymous inner class a lambda(Á¯Ò¼8¼É–£ƒ2J$ded85ff9-6e7a-4090-8c6a-5def31bdd6eb
-˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬¥³„úÿÿÿÿ8½É–£ƒ2J$5f7ac3af-a949-4c2f-b0ea-f01f215d4d60
-˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌëÒØşÿÿÿÿ8½É–£ƒ2J$e31647ee-61b9-4afd-8f8f-6f659129d3d5
-b
-java:S1854"@Remove this useless assignment to local variable "btn_analysis".(ÌëÒØşÿÿÿÿ8›ø²¬ƒ2
-S
-java:S1481"1Remove this unused "btn_analysis" local variable.(ÌëÒØşÿÿÿÿ8œø²¬ƒ2
+java:S1604"(Make this anonymous inner class a lambda(Á¯Ò¼8¼É–£ƒ2J$16ed8358-7ba6-4ef3-8739-bd0229b9a7d8
+j
+java:S1604"(Make this anonymous inner class a lambda(äŞ¶58Ëïèƒ2J$b7b699c9-ca13-4032-a146-e19a652ee65b
+˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬¥³„úÿÿÿÿ8½É–£ƒ2J$0779b6ed-bf3e-4822-8824-a8683dcc9225
+˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†’œ¥ùÿÿÿÿ8½É–£ƒ2J$cc21ee08-fee4-4da7-9f6f-a0c3a0e4defb

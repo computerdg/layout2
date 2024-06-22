@@ -5,6 +5,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -89,12 +92,16 @@ public class create_chall extends AppCompatActivity {
                 return;
             }
 
-            Toast.makeText(this, "챌린지 생성 완료\n" +
+            showCustomToast("⭐챌린지 생성 완료⭐\n" +
                     "제목: " + title + "\n" +
                     "목표: " + goal + "\n" +
                     "내용: " + content + "\n" +
                     "시작 날짜: " + startDate + "\n" +
-                    "종료 날짜: " + endDate, Toast.LENGTH_LONG).show();
+                    "종료 날짜: " + endDate);
+
+
+
+
 
             // check_currentLocation으로 set_location 에서 넘어온 위도, 경도 정보를 넘겨줌
             SharedPreferences sharedPreferences = getSharedPreferences("LocationData", Context.MODE_PRIVATE);
@@ -104,10 +111,24 @@ public class create_chall extends AppCompatActivity {
             editor.apply();
 
             // 이건 그냥 페이지 넘김
-            Intent startRoutineIntent = new Intent(create_chall.this, start_Routine.class);
+            Intent startRoutineIntent = new Intent(create_chall.this, set_routine.class);
             startActivity(startRoutineIntent);
             finish();
         });
+    }
+
+    // 커스텀 토스트 띄우기
+    private void showCustomToast(String message) {
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate(R.layout.custom_toast, null);
+
+        TextView text = layout.findViewById(R.id.toast_text);
+        text.setText(message);
+
+        Toast toast = new Toast(getApplicationContext());
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setView(layout);
+        toast.show();
     }
 
     private Integer[] generateYearArray() {

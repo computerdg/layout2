@@ -250,8 +250,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="85dp"
-        android:text="생성 완료"
+        android:text="다음 단계"
         android:textSize="20sp"
+        android:textStyle="bold"
         android:backgroundTint="@android:color/holo_blue_light" />
 
 </LinearLayout>

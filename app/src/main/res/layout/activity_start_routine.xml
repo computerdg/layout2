@@ -10,6 +10,15 @@
     android:gravity="center"
     android:padding="16dp">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Diet Challenge"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:layout_marginBottom="30dp"/>
+
     <!-- 오늘의 루틴 -->
     <LinearLayout
         android:layout_width="match_parent"

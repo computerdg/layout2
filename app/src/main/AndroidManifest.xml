@@ -39,6 +39,7 @@
         <activity
             android:name=".start_Routine"
             android:exported="false" />
+        <activity android:name=".AddExerciseActivity"/>
         <activity
             android:name=".complete_todayWorkout"
             android:exported="false" />

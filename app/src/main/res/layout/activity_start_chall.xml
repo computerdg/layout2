@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="챌린지 제목"
+        android:text="다이어트 챌린지"
         android:textStyle="bold"
         android:textSize="24sp"
         android:layout_marginBottom="30dp"
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="챌린지 진행률"
-        android:textSize="18dp"
+        android:textSize="20dp"
         android:layout_marginBottom="8dp"/>
 
     <ProgressBar
@@ -34,7 +34,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:progress="50"
+        android:progress="40"
+        android:scaleY="5"
         android:max="100"/>
 
     <!-- 오늘의 루틴 -->
@@ -75,15 +76,16 @@
         android:id="@+id/btn_startRoutine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="운동 시작하기"
-        android:textSize="16dp"
-        android:textColor="@android:color/white"
-        android:background="#B2EBF2"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_button"
         android:paddingLeft="24dp"
-        android:paddingRight="24dp"
         android:paddingTop="12dp"
+        android:paddingRight="24dp"
         android:paddingBottom="12dp"
-        android:layout_marginTop="50dp" />
+        android:text="운동 시작하기"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="20dp" />
 
 
 </LinearLayout>

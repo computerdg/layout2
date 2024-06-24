@@ -60,7 +60,7 @@ public class set_routine extends AppCompatActivity {
         btn_complete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), start_Routine.class);
+                Intent intent = new Intent(getApplicationContext(), challList_proto.class);
                 startActivity(intent);
             }
         });

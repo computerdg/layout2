@@ -39,6 +39,7 @@ public class challList_proto extends AppCompatActivity {
         btn_challInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // 챌린지 생성에서 지정한 챌린지 제목이 textview에 뜨도록 해야됨
                 Intent intent = new Intent(getApplicationContext(), FlipperActivity.class); // 여기에 챌린지 정보로 넘겨줌
                 startActivity(intent);
             }

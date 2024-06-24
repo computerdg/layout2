@@ -1,5 +1,6 @@
 package com.example.geofencetest;
 // ExerciseJournalActivity.java
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CalendarView;
@@ -20,6 +21,8 @@ public class ExerciseDiaryActivity extends AppCompatActivity {
     private TextView tvJournalDisplay;
     private String selectedDate = "";
 
+    private SharedPreferences sharedPreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,16 +34,14 @@ public class ExerciseDiaryActivity extends AppCompatActivity {
         btnSave = findViewById(R.id.btn_save);
         tvJournalDisplay = findViewById(R.id.tv_journal_display);
 
+        sharedPreferences = getSharedPreferences("ExerciseJournal", MODE_PRIVATE);
+
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-                // Show the form when a date is selected
                 selectedDate = year + "-" + (month + 1) + "-" + dayOfMonth;
                 scrollView.setVisibility(View.VISIBLE);
-                etJournalEntry.setVisibility(View.VISIBLE);
-                btnSave.setVisibility(View.VISIBLE);
-                tvJournalDisplay.setVisibility(View.GONE);
-                etJournalEntry.setText("");
+                displayJournalEntry();
             }
         });
 
@@ -50,13 +51,31 @@ public class ExerciseDiaryActivity extends AppCompatActivity {
             if (journalEntry.isEmpty()) {
                 Toast.makeText(ExerciseDiaryActivity.this, "운동 일지를 입력하세요.", Toast.LENGTH_SHORT).show();
             } else {
-                // Save the journal entry (this could be to a database, shared preferences, etc.)
-                tvJournalDisplay.setText(selectedDate + "\n" + journalEntry);
-                tvJournalDisplay.setVisibility(View.VISIBLE);
-                etJournalEntry.setVisibility(View.GONE);
-                btnSave.setVisibility(View.GONE);
+                saveJournalEntry(journalEntry);
+                displayJournalEntry();
                 Toast.makeText(ExerciseDiaryActivity.this, "운동일지가 저장되었습니다.", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void saveJournalEntry(String journalEntry) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(selectedDate, journalEntry);
+        editor.apply();
+    }
+
+    private void displayJournalEntry() {
+        String journalEntry = sharedPreferences.getString(selectedDate, "");
+        if (!journalEntry.isEmpty()) {
+            tvJournalDisplay.setText(selectedDate + "\n" + journalEntry);
+            tvJournalDisplay.setVisibility(View.VISIBLE);
+            etJournalEntry.setVisibility(View.GONE);
+            btnSave.setVisibility(View.GONE);
+        } else {
+            tvJournalDisplay.setVisibility(View.GONE);
+            etJournalEntry.setVisibility(View.VISIBLE);
+            btnSave.setVisibility(View.VISIBLE);
+            etJournalEntry.setText("");
+        }
     }
 }

@@ -1,36 +1,28 @@
 package com.example.geofencetest;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ViewFlipper;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 public class FlipperActivity extends AppCompatActivity {
 
-    private ViewFlipper viewFlipper;
+    private ViewPager viewPager;
+    private MyPagerAdapter pagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_challflip);
 
-        Button btnPrev = findViewById(R.id.btnPrev);
-        Button btnNext = findViewById(R.id.btnNext);
-        viewFlipper = findViewById(R.id.viewFlipper1);
+        viewPager = findViewById(R.id.viewPager);
 
-        btnPrev.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                viewFlipper.showPrevious();
-            }
-        });
+        int[] layouts = {
+                R.layout.screen1,
+                R.layout.screen2,
+                R.layout.screen3
+        };
 
-        btnNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                viewFlipper.showNext();
-            }
-        });
+        pagerAdapter = new MyPagerAdapter(this, layouts);
+        viewPager.setAdapter(pagerAdapter);
     }
 }

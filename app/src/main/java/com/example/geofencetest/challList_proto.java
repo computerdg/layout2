@@ -11,6 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+
 public class challList_proto extends AppCompatActivity {
 
     @Override
@@ -20,12 +21,21 @@ public class challList_proto extends AppCompatActivity {
         setContentView(R.layout.activity_chall_list_proto);
 
         Button cl1 = (Button) findViewById(R.id.cl1);
+        Button cl2 = (Button) findViewById(R.id.cl2);
         Button btn_makeChall = (Button) findViewById(R.id.btn_makeChall);
 
         cl1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ChallengeViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        cl2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), FlipperActivity.class);
                 startActivity(intent);
             }
         });

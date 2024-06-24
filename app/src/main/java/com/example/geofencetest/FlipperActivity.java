@@ -17,9 +17,9 @@ public class FlipperActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager);
 
         int[] layouts = {
-                R.layout.screen1,
-                R.layout.screen2,
-                R.layout.screen3
+                R.layout.activity_start_chall,
+                R.layout.activity_chall_info,
+                R.layout.activity_routine_info
         };
 
         pagerAdapter = new MyPagerAdapter(this, layouts);

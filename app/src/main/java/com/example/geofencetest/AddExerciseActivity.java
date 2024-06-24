@@ -80,7 +80,7 @@ public class AddExerciseActivity extends AppCompatActivity {
         String[] exercises;
         switch (category) {
             case "가슴":
-                exercises = new String[]{"펙덱 플라이", "니 푸쉬업", "인클라인 벤치프레스"};
+                exercises = new String[]{"펙덱 플라이", "니 푸쉬업", "벤치프레스"};
                 break;
             case "등":
                 exercises = new String[]{"랫풀다운", "바벨 로우", "풀업"};

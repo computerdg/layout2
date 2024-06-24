@@ -23,6 +23,7 @@ public class challList_proto extends AppCompatActivity {
         Button cl1 = (Button) findViewById(R.id.cl1);
         Button cl2 = (Button) findViewById(R.id.cl2);
         Button btn_makeChall = (Button) findViewById(R.id.btn_makeChall);
+        BUtton btn_challInfo = (Button) findViewById(R.id.btn_challInfo);
 
         cl1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,5 +48,14 @@ public class challList_proto extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btn_challInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), @@@@@@.class); // 여기에 챌린지 정보로 넘겨줌
+                startActivity(intent);
+            }
+        });
+
     }
 }

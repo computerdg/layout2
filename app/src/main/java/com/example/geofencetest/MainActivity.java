@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button btn_workout = (Button) findViewById(R.id.btn_workout);
         Button btn_ranking = (Button) findViewById(R.id.btn_ranking);
+        Button btn_analysis = (Button) findViewById(R.id.btn_analysis);
 
         // 운동
         btn_workout.setOnClickListener(new View.OnClickListener() {
@@ -30,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ranking.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_analysis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), proto_analysis.class);
                 startActivity(intent);
             }
         });

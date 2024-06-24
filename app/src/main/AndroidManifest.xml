@@ -19,6 +19,9 @@
         <activity android:name=".ChallengeViewActivity"/>
         <activity android:name=".ChallengeViewEditActivity"/>
         <activity
+            android:name=".proto_analysis"
+            android:exported="false" />
+        <activity
             android:name=".set_routine"
             android:exported="false" />
         <activity
@@ -42,7 +45,7 @@
         <activity
             android:name=".start_Routine"
             android:exported="false" />
-        <activity android:name=".AddExerciseActivity"/>
+        <activity android:name=".AddExerciseActivity" />
         <activity
             android:name=".complete_todayWorkout"
             android:exported="false" />

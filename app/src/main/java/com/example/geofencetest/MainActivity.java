@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        //분석
         btn_analysis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

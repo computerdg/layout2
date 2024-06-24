@@ -43,6 +43,9 @@
             android:name=".check_currentLocation"
             android:exported="false" />
         <activity
+            android:name=".ExerciseDiaryActivity"
+            android:exported="false" />
+        <activity
             android:name=".start_Routine"
             android:exported="false" />
         <activity android:name=".AddExerciseActivity" />

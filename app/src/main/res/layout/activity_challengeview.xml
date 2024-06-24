@@ -83,8 +83,12 @@
         android:id="@+id/complete_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:text="운동 완료"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="18dp"
         android:layout_gravity="center"
         android:padding="16dp"
-        android:background="#e0ffff"/>
+        android:background="@drawable/rounded_button"/>
 </LinearLayout>

@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         btn_analysis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), proto_analysis.class);
+                Intent intent = new Intent(getApplicationContext(), proto_analysisList.class);
                 startActivity(intent);
             }
         });

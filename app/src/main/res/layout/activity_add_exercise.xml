@@ -92,7 +92,7 @@
     </LinearLayout>
 
     <!-- 추가 완료 버튼 -->
-    <android.widget.Button
+    <Button
         android:id="@+id/completeButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -1,5 +1,6 @@
 package com.example.geofencetest;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -7,154 +8,95 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-public class set_routine extends AppCompatActivity {
+import java.util.ArrayList;
 
-    private static final int REQUEST_ADD_EXERCISE = 1;
+public class set_routine extends Activity {
 
-    private Button backButton;
-    private Button completeButton;
-    private LinearLayout mondayExerciseLayout;
-    private LinearLayout wednesdayExerciseLayout;
-    private LinearLayout fridayExerciseLayout;
-
-    private String selectedDay;
+    private LinearLayout mondayExerciseLayout, wednesdayExerciseLayout, fridayExerciseLayout;
+    private Button btnComplete;
+    private ArrayList<AddExerciseActivity.Exercise> routineExercises;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_set_routine);
 
-        backButton = findViewById(R.id.backButton);
-        completeButton = findViewById(R.id.completeButton);
         mondayExerciseLayout = findViewById(R.id.mondayExerciseLayout);
         wednesdayExerciseLayout = findViewById(R.id.wednesdayExerciseLayout);
         fridayExerciseLayout = findViewById(R.id.fridayExerciseLayout);
+        btnComplete = findViewById(R.id.btn_complete);
 
-        Button btn_complete = (Button) findViewById(R.id.btn_complete);
-
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-
-        completeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // 완료 버튼을 클릭하면 메인 화면으로 이동
-                Intent intent = new Intent(set_routine.this, MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
-        btn_complete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), challList_proto.class);
-                startActivity(intent);
-            }
-        });
+        routineExercises = new ArrayList<>();
 
         findViewById(R.id.addMondayExercise).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                selectedDay = "월";
-                Intent intent = new Intent(set_routine.this, AddExerciseActivity.class);
-                startActivityForResult(intent, REQUEST_ADD_EXERCISE);
+                addExerciseForDay(1);
             }
         });
 
         findViewById(R.id.addWednesdayExercise).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                selectedDay = "수";
-                Intent intent = new Intent(set_routine.this, AddExerciseActivity.class);
-                startActivityForResult(intent, REQUEST_ADD_EXERCISE);
+                addExerciseForDay(3);
             }
         });
 
         findViewById(R.id.addFridayExercise).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                selectedDay = "금";
-                Intent intent = new Intent(set_routine.this, AddExerciseActivity.class);
-                startActivityForResult(intent, REQUEST_ADD_EXERCISE);
+                addExerciseForDay(5);
             }
         });
+
+        btnComplete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(set_routine.this, start_chall.class);
+                intent.putParcelableArrayListExtra("routineExercises", routineExercises);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void addExerciseForDay(int day) {
+        Intent intent = new Intent(this, AddExerciseActivity.class);
+        startActivityForResult(intent, day);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_ADD_EXERCISE && resultCode == RESULT_OK && data != null) {
-            String category = data.getStringExtra("category");
-            String exercise = data.getStringExtra("exercise");
-            addExerciseToRoutine(selectedDay, category, exercise);
+        if (resultCode == RESULT_OK && data != null) {
+            ArrayList<AddExerciseActivity.Exercise> exercises = data.getParcelableArrayListExtra("selectedExercises");
+            if (exercises != null) {
+                routineExercises.addAll(exercises);
+                displayExercises(exercises, requestCode);
+            }
         }
     }
 
-    private void addExerciseToRoutine(String day, String category, String exercise) {
-        LinearLayout exerciseLayout;
+    private void displayExercises(ArrayList<AddExerciseActivity.Exercise> exercises, int day) {
+        LinearLayout layout = null;
         switch (day) {
-            case "월":
-                exerciseLayout = mondayExerciseLayout;
+            case 1:
+                layout = mondayExerciseLayout;
                 break;
-            case "수":
-                exerciseLayout = wednesdayExerciseLayout;
+            case 3:
+                layout = wednesdayExerciseLayout;
                 break;
-            case "금":
-                exerciseLayout = fridayExerciseLayout;
+            case 5:
+                layout = fridayExerciseLayout;
                 break;
-            default:
-                return;
         }
-
-        LinearLayout exerciseItemLayout = new LinearLayout(this);
-        exerciseItemLayout.setOrientation(LinearLayout.HORIZONTAL);
-        exerciseItemLayout.setBackgroundColor(getResources().getColor(R.color.gray));
-        exerciseItemLayout.setPadding(8, 8, 8, 8);
-        exerciseItemLayout.setLayoutParams(new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-
-        TextView categoryTextView = new TextView(this);
-        categoryTextView.setText(category);
-        categoryTextView.setTextSize(14);
-        categoryTextView.setTextColor(getResources().getColor(R.color.black));
-        categoryTextView.setBackgroundColor(getResources().getColor(R.color.teal_200));
-        categoryTextView.setPadding(4, 4, 4, 4);
-        exerciseItemLayout.addView(categoryTextView);
-
-        TextView exerciseTextView = new TextView(this);
-        exerciseTextView.setText(exercise);
-        exerciseTextView.setTextSize(14);
-        exerciseTextView.setTextColor(getResources().getColor(R.color.black));
-        exerciseTextView.setLayoutParams(new LinearLayout.LayoutParams(
-                0, LinearLayout.LayoutParams.WRAP_CONTENT, 1));
-        exerciseItemLayout.addView(exerciseTextView);
-
-        Button removeButton = new Button(this);
-        removeButton.setText("X");
-        removeButton.setTextSize(14);
-        removeButton.setTextColor(getResources().getColor(R.color.black));
-        removeButton.setBackgroundResource(android.R.color.transparent);
-        removeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                exerciseLayout.removeView(exerciseItemLayout);
+        if (layout != null) {
+            for (AddExerciseActivity.Exercise exercise : exercises) {
+                TextView textView = new TextView(this);
+                textView.setText(exercise.getName() + " - " + exercise.getWeight() + "kg x " + exercise.getReps() + "회");
+                layout.addView(textView);
             }
-        });
-        exerciseItemLayout.addView(removeButton);
-
-        exerciseLayout.addView(exerciseItemLayout);
+        }
     }
 }

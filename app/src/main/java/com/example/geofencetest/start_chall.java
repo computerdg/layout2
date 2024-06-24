@@ -1,30 +1,42 @@
 package com.example.geofencetest;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.annotation.Nullable;
 
-public class start_chall extends AppCompatActivity {
+import java.util.ArrayList;
+
+public class start_chall extends Activity {
+
+    private TextView tvRoutineDetails;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_start_chall);
 
-        Button btn_startRoutine = (Button) findViewById(R.id.btn_startRoutine);
+        tvRoutineDetails = findViewById(R.id.tv_routine_details);
 
-        btn_startRoutine.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), check_currentLocation.class);
-                startActivity(intent);
-            }
-        });
+        Intent intent = getIntent();
+        ArrayList<AddExerciseActivity.Exercise> routineExercises = intent.getParcelableArrayListExtra("routineExercises");
+        if (routineExercises != null) {
+            displayRoutine(routineExercises);
+        }
+    }
+
+    private void displayRoutine(ArrayList<AddExerciseActivity.Exercise> exercises) {
+        StringBuilder details = new StringBuilder();
+        for (AddExerciseActivity.Exercise exercise : exercises) {
+            details.append(exercise.getName())
+                    .append(" - ")
+                    .append(exercise.getWeight())
+                    .append("kg x ")
+                    .append(exercise.getReps())
+                    .append("회\n");
+        }
+        tvRoutineDetails.setText(details.toString());
     }
 }

@@ -1,22 +1,42 @@
 package com.example.geofencetest;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
+import android.widget.TextView;
 
-public class start_Routine extends AppCompatActivity {
+import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
+
+public class start_Routine extends Activity {
+
+    private TextView tvRoutineDetails;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_routine);
 
-        // 버튼 설정
-        Button startRoutineButton = findViewById(R.id.btn_startRoutine);
-        startRoutineButton.setOnClickListener(v -> {
-            Intent intent = new Intent(start_Routine.this, check_currentLocation.class);
-            startActivity(intent);
-        });
+        tvRoutineDetails = findViewById(R.id.tv_routine_details);
+
+        Intent intent = getIntent();
+        ArrayList<AddExerciseActivity.Exercise> routineExercises = intent.getParcelableArrayListExtra("routineExercises");
+        if (routineExercises != null) {
+            displayRoutine(routineExercises);
+        }
+    }
+
+    private void displayRoutine(ArrayList<AddExerciseActivity.Exercise> exercises) {
+        StringBuilder details = new StringBuilder();
+        for (AddExerciseActivity.Exercise exercise : exercises) {
+            details.append(exercise.getName())
+                    .append(" - ")
+                    .append(exercise.getWeight())
+                    .append("kg x ")
+                    .append(exercise.getReps())
+                    .append("회\n");
+        }
+        tvRoutineDetails.setText(details.toString());
     }
 }

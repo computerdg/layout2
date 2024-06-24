@@ -1,109 +1,52 @@
 package com.example.geofencetest;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
+import android.text.InputType;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
-public class AddExerciseActivity extends AppCompatActivity {
+public class AddExerciseActivity extends Activity {
 
-    private Button closeButton;
-    private Button completeButton;
-    private ListView categoryListView;
-    private ListView exerciseListView;
+    private ListView categoryListView, exerciseListView;
     private LinearLayout selectedItemsLayout;
-
-    private ArrayList<String> selectedItems;
-    private String selectedCategory;
-    private String selectedExercise;
+    private Button completeButton, closeButton;
+    private ArrayList<Exercise> selectedExercises;
+    private String selectedExerciseName;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_exercise);
 
-        closeButton = findViewById(R.id.closeButton);
-        completeButton = findViewById(R.id.completeButton);
         categoryListView = findViewById(R.id.categoryListView);
         exerciseListView = findViewById(R.id.exerciseListView);
         selectedItemsLayout = findViewById(R.id.selectedItemsLayout);
+        completeButton = findViewById(R.id.completeButton);
+        closeButton = findViewById(R.id.closeButton);
+        selectedExercises = new ArrayList<>();
 
-        selectedItems = new ArrayList<>();
+        // 예시 데이터
+        String[] categories = {"가슴", "등", "다리"};
+        String[] exercises = {"벤치프레스", "랫풀다운", "스쿼트"};
 
-        closeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-
-        completeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (selectedCategory != null && selectedExercise != null) {
-                    Intent resultIntent = new Intent();
-                    resultIntent.putExtra("category", selectedCategory);
-                    resultIntent.putExtra("exercise", selectedExercise);
-                    setResult(RESULT_OK, resultIntent);
-                    finish();
-                }
-            }
-        });
-
-        setupCategoryListView();
-    }
-
-    private void setupCategoryListView() {
-        String[] categories = {"가슴", "등", "하체", "어깨", "삼두", "코어", "유산소"};
         ArrayAdapter<String> categoryAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, categories);
         categoryListView.setAdapter(categoryAdapter);
-
-        categoryListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                selectedCategory = categories[position];
-                setupExerciseListView(selectedCategory);
-            }
-        });
-    }
-
-    private void setupExerciseListView(String category) {
-        String[] exercises;
-        switch (category) {
-            case "가슴":
-                exercises = new String[]{"펙덱 플라이", "니 푸쉬업", "벤치프레스"};
-                break;
-            case "등":
-                exercises = new String[]{"랫풀다운", "바벨 로우", "풀업"};
-                break;
-            case "하체":
-                exercises = new String[]{"스쿼트", "레그 프레스", "런지"};
-                break;
-            case "어깨":
-                exercises = new String[]{"숄더 프레스", "사이드 레터럴 레이즈", "프론트 레이즈"};
-                break;
-            case "삼두":
-                exercises = new String[]{"트라이셉스 익스텐션", "덤벨 킥백", "케이블 푸쉬다운"};
-                break;
-            case "코어":
-                exercises = new String[]{"크런치", "플랭크", "레그 레이즈"};
-                break;
-            case "유산소":
-                exercises = new String[]{"러닝", "싸이클", "로잉"};
-                break;
-            default:
-                exercises = new String[]{};
-                break;
-        }
 
         ArrayAdapter<String> exerciseAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, exercises);
         exerciseListView.setAdapter(exerciseAdapter);
@@ -111,24 +54,128 @@ public class AddExerciseActivity extends AppCompatActivity {
         exerciseListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                selectedExercise = exercises[position];
-                addSelectedItemView(selectedCategory + ": " + selectedExercise);
+                selectedExerciseName = (String) parent.getItemAtPosition(position);
+                showInputDialog();
+            }
+        });
+
+        completeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.putParcelableArrayListExtra("selectedExercises", selectedExercises);
+                setResult(RESULT_OK, intent);
+                finish();
+            }
+        });
+
+        closeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }
 
-    private void addSelectedItemView(String item) {
-        final TextView textView = new TextView(this);
-        textView.setText(item);
-        textView.setTextSize(16);
-        textView.setPadding(8, 8, 8, 8);
-        selectedItemsLayout.addView(textView);
+    private void showInputDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(selectedExerciseName + " 설정");
 
-        textView.setOnClickListener(new View.OnClickListener() {
+        LinearLayout layout = new LinearLayout(this);
+        layout.setOrientation(LinearLayout.VERTICAL);
+
+        final EditText weightInput = new EditText(this);
+        weightInput.setHint("운동 무게 (kg)");
+        weightInput.setInputType(InputType.TYPE_CLASS_NUMBER);
+        layout.addView(weightInput);
+
+        final EditText repsInput = new EditText(this);
+        repsInput.setHint("운동 회수");
+        repsInput.setInputType(InputType.TYPE_CLASS_NUMBER);
+        layout.addView(repsInput);
+
+        builder.setView(layout);
+
+        builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                selectedItemsLayout.removeView(textView);
+            public void onClick(DialogInterface dialog, int which) {
+                String weight = weightInput.getText().toString();
+                String reps = repsInput.getText().toString();
+                if (!weight.isEmpty() && !reps.isEmpty()) {
+                    Exercise exercise = new Exercise(selectedExerciseName, weight, reps);
+                    selectedExercises.add(exercise);
+                    displaySelectedExercise(exercise);
+                }
             }
         });
+
+        builder.setNegativeButton("취소", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        builder.show();
+    }
+
+    private void displaySelectedExercise(Exercise exercise) {
+        TextView textView = new TextView(this);
+        textView.setText(exercise.getName() + " - " + exercise.getWeight() + "kg x " + exercise.getReps() + "회");
+        selectedItemsLayout.addView(textView);
+    }
+
+    public static class Exercise implements Parcelable {
+        private String name;
+        private String weight;
+        private String reps;
+
+        public Exercise(String name, String weight, String reps) {
+            this.name = name;
+            this.weight = weight;
+            this.reps = reps;
+        }
+
+        protected Exercise(Parcel in) {
+            name = in.readString();
+            weight = in.readString();
+            reps = in.readString();
+        }
+
+        public static final Creator<Exercise> CREATOR = new Creator<Exercise>() {
+            @Override
+            public Exercise createFromParcel(Parcel in) {
+                return new Exercise(in);
+            }
+
+            @Override
+            public Exercise[] newArray(int size) {
+                return new Exercise[size];
+            }
+        };
+
+        public String getName() {
+            return name;
+        }
+
+        public String getWeight() {
+            return weight;
+        }
+
+        public String getReps() {
+            return reps;
+        }
+
+        @Override
+        public int describeContents() {
+            return 0;
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            dest.writeString(name);
+            dest.writeString(weight);
+            dest.writeString(reps);
+        }
     }
 }

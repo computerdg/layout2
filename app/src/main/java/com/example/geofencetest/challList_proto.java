@@ -20,27 +20,12 @@ public class challList_proto extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_chall_list_proto);
 
-        Button cl1 = (Button) findViewById(R.id.cl1);
-        Button cl2 = (Button) findViewById(R.id.cl2);
+
         Button btn_makeChall = (Button) findViewById(R.id.btn_makeChall);
-        BUtton btn_challInfo = (Button) findViewById(R.id.btn_challInfo);
+        Button btn_challInfo = (Button) findViewById(R.id.btn_challInfo);
 
-        cl1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ChallengeViewActivity.class);
-                startActivity(intent);
-            }
-        });
 
-        cl2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), FlipperActivity.class);
-                startActivity(intent);
-            }
-        });
-
+        // 챌린지 생성 버튼
         btn_makeChall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,10 +34,12 @@ public class challList_proto extends AppCompatActivity {
             }
         });
 
+
+        // Null 챌린지로 넘어가서 챌린지 정보 볼수있게함
         btn_challInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), @@@@@@.class); // 여기에 챌린지 정보로 넘겨줌
+                Intent intent = new Intent(getApplicationContext(), FlipperActivity.class); // 여기에 챌린지 정보로 넘겨줌
                 startActivity(intent);
             }
         });

@@ -41,12 +41,9 @@
             android:layout_height="120dp"
             android:layout_marginBottom="25dp"
             android:background="@drawable/rounded_button02"
-<<<<<<< Updated upstream
-            android:id="@+id/cl2"/>
-=======
             android:text="Null"
             android:textSize="20dp" />
->>>>>>> Stashed changes
+
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_makeChall"
@@ -58,11 +55,7 @@
             android:background="@drawable/challbutton_proto"/>
 
 
-
-
-
     </LinearLayout>
-
 
 
 </LinearLayout>

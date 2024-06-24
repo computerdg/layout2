@@ -15,19 +15,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GeofenceTest"
         tools:targetApi="31">
-<<<<<<< Updated upstream
+
         <activity android:name=".community.CommunityActivity"/>
         <activity android:name=".FlipperActivity"/>
         <activity android:name=".ChallengeViewActivity"/>
         <activity android:name=".ChallengeViewEditActivity"/>
-=======
+
         <activity
             android:name=".proto_analysisList"
             android:exported="false" />
-        <activity android:name=".FlipperActivity" />
-        <activity android:name=".ChallengeViewActivity" />
-        <activity android:name=".ChallengeViewEditActivity" />
->>>>>>> Stashed changes
+
         <activity
             android:name=".proto_analysis"
             android:exported="false" />

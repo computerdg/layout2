@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.geofencetest.R;
+import com.example.geofencetest.community.Post;
 
 import java.util.List;
 
@@ -36,7 +37,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         holder.tvUsername.setText(post.getUsername());
         holder.tvPostTime.setText(post.getPostTime());
         holder.tvPostContent.setText(post.getContent());
-        // 프로필 이미지 및 좋아요/댓글 버튼 설정
+        // 프로필 이미지 및 좋아요/댓글 버튼 설정 (생략 가능)
     }
 
     @Override

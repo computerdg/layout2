@@ -1,17 +1,17 @@
 
->
-java:S1604""(Make this anonymous inner class a lambda(Ò¿þˆ
->
-java:S1604*"(Make this anonymous inner class a lambda(ÈÄŠÒ
-C
-java:S16042"(Make this anonymous inner class a lambda(ð«Žžøÿÿÿÿ
->
-java:S1604Q"(Make this anonymous inner class a lambda(Ÿ€Îù
-C
-java:S1604^"(Make this anonymous inner class a lambda(ÚÆÞíúÿÿÿÿ
-Y
-java:S1874A">Remove this use of "startActivityForResult"; it is deprecated.(õ²ªËûÿÿÿÿ
-k
-java:S3252O"PUse static access with "android.view.ViewGroup$LayoutParams" for "WRAP_CONTENT".(ÏÍ¿»üÿÿÿÿ
-`
-java:S1874|"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(ŸŒ¹Ñ
+d
+java:S1604""(Make this anonymous inner class a lambda(Ò¿þˆJ$c39ae066-2344-4323-bd0c-a2d002e97d1f
+d
+java:S1604*"(Make this anonymous inner class a lambda(ÈÄŠÒJ$7c25c151-e141-4029-b58a-8e2ddbbdf175
+i
+java:S16042"(Make this anonymous inner class a lambda(ð«ŽžøÿÿÿÿJ$b88894ee-c899-4e10-8bad-f7e2eadd3e56
+d
+java:S1604Q"(Make this anonymous inner class a lambda(Ÿ€ÎùJ$9f1b3a24-0e58-45e9-9bf0-b545ff32eee3
+i
+java:S1604^"(Make this anonymous inner class a lambda(ÚÆÞíúÿÿÿÿJ$c84e482c-79d0-4f7c-88e7-a5794685cc40
+
+java:S1874A">Remove this use of "startActivityForResult"; it is deprecated.(õ²ªËûÿÿÿÿJ$9b676a83-fe33-4239-899e-816b930827fe
+‘
+java:S3252O"PUse static access with "android.view.ViewGroup$LayoutParams" for "WRAP_CONTENT".(ÏÍ¿»üÿÿÿÿJ$d4fcdbf1-331f-4064-b9c6-9e7568ea765e
+†
+java:S1874|"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(ŸŒ¹ÑJ$21092662-4b94-485a-b1e1-b7138c765aa1

@@ -1,7 +1,7 @@
 
 p
-java:S1604"(Make this anonymous inner class a lambda(ÛÅ¢µÿÿÿÿÿ8”ÿÎï„2J$fd3ff054-dd35-4081-9732-f0c58f000913
-E
-java:S1604%"(Make this anonymous inner class a lambda(ïã±8òş€ğ„2
-	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(«ÁŞ°8•ÿÎï„2J$fbff09a4-ee0c-4376-9710-f7b899d8922c
-˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ä…­àıÿÿÿÿ8•ÿÎï„2J$3f781315-fd91-47ed-a1fb-9e4825287724
+java:S1604"(Make this anonymous inner class a lambda(ÛÅ¢µÿÿÿÿÿ8”ÿÎï„2J$9c41d7cd-4fae-49ae-94a0-509bf05a29a0
+k
+java:S1604%"(Make this anonymous inner class a lambda(ïã±8òş€ğ„2J$257970f4-2ac0-4ecf-bf56-57ea7e4a49e0
+	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(«ÁŞ°8•ÿÎï„2J$66098aa0-4a47-4247-a827-cf639388650d
+˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ä…­àıÿÿÿÿ8•ÿÎï„2J$46840be0-5af3-4980-8358-06a2ef759ae9

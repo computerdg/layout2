@@ -28,7 +28,6 @@ public class start_chall extends Activity {
 
         Button btn_startRoutine = findViewById(R.id.btn_startRoutine);
 
-
         // 운동 시작하기 버튼
         btn_startRoutine.setOnClickListener(new View.OnClickListener() {
             @Override

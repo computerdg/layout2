@@ -1,6 +1,6 @@
 
-q
+—
 java:S1450
-"[Remove the "pagerAdapter" field and declare it as a local variable in the relevant methods.(ïòó
-s
-java:S1450	"XRemove the "viewPager" field and declare it as a local variable in the relevant methods.(åÙ¬Ïûÿÿÿÿ
+"[Remove the "pagerAdapter" field and declare it as a local variable in the relevant methods.(ïòóJ$397e35fb-d09d-46f6-8fe6-ed74d10cd623
+™
+java:S1450	"XRemove the "viewPager" field and declare it as a local variable in the relevant methods.(åÙ¬ÏûÿÿÿÿJ$109118eb-69f3-4257-807a-2b6ed45d9262

@@ -1,6 +1,6 @@
 
-C
-java:S1604+"(Make this anonymous inner class a lambda(ÁŽ¤Ïþÿÿÿÿ
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¦¨Ñ°úÿÿÿÿ
-q
-java:S1450"[Remove the "calendarView" field and declare it as a local variable in the relevant methods.(ÑüÂÚ
+i
+java:S1604+"(Make this anonymous inner class a lambda(ÁŽ¤ÏþÿÿÿÿJ$80c5889a-d990-4347-a421-4e10dd09e01d
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¦¨Ñ°úÿÿÿÿJ$f038e6db-ac93-453d-b860-7595e563dbd3
+—
+java:S1450"[Remove the "calendarView" field and declare it as a local variable in the relevant methods.(ÑüÂÚJ$d992bf07-ce90-41a5-99e9-4b0cde5bcb37

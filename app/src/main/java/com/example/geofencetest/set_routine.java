@@ -59,8 +59,8 @@ public class set_routine extends Activity {
             @Override
             public void onClick(View v) {
                 saveRoutineExercisesToPreferences();
-                Intent intent = new Intent(set_routine.this, start_chall.class);
-                startActivity(intent);
+                Intent mainIntent = new Intent(set_routine.this, MainActivity.class);
+                startActivity(mainIntent);
             }
         });
     }

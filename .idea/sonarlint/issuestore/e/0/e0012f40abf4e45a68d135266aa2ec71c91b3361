@@ -1,15 +1,15 @@
 
-”	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(íË“Çûÿÿÿÿ8¢¶ªï„2J$d28d81d6-9302-4ff3-80a7-7a64c0fe84c1
-	java:S116""[Rename this field "RADIUS_IN_METERS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ŒõÍ8¥¶ªï„2J$337f59f1-4f57-4bd9-bf3c-58f48fbf7422
+”	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(íË“Çûÿÿÿÿ8¢¶ªï„2J$0dacac4b-3ada-4989-be25-5dae21135167
+	java:S116""[Rename this field "RADIUS_IN_METERS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ŒõÍ8¥¶ªï„2J$e1cec739-4afb-4f05-a664-0b1ea2db8346
 d
-java:S1170""!Make this final field static too.(·ŒõÍ8©¶ªï„2J$f24a597b-32b7-45cd-b1ce-363cf27ef020
+java:S1170""!Make this final field static too.(·ŒõÍ8©¶ªï„2J$8fba9f10-41ae-46ac-8461-a806ed8d9dcf
 Ÿ
-java:S3252E"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(»¤è«ıÿÿÿÿ8·¶ªï„2J$d403d830-eec2-4405-ae94-64b4bafca5fd
+java:S3252E"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(»¤è«ıÿÿÿÿ8·¶ªï„2J$80fb76fa-acd5-4dff-bb6e-480d86bfd6fb
 š
-java:S3252F"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(§Ú¶8·¶ªï„2J$910b6f62-71b1-412e-9bdf-e4762223f960
+java:S3252F"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(§Ú¶8·¶ªï„2J$716a92ed-ed14-4b98-9c61-3361bef1f8e4
 Ÿ
-java:S3252]"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(îÄ¤¸üÿÿÿÿ8º¶ªï„2J$a030ad7a-1c6b-4ec0-8b81-485fce442f8e
+java:S3252]"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(îÄ¤¸üÿÿÿÿ8º¶ªï„2J$fde61cc3-c6c1-430b-aeac-078bd18f3673
 Ÿ
-java:S3252k"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(îÄ¤¸üÿÿÿÿ8¼¶ªï„2J$b78d07a5-7d50-4d84-97ee-f118082e7d24
+java:S3252k"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(îÄ¤¸üÿÿÿÿ8¼¶ªï„2J$21e01ef9-d0cf-42dc-9525-96fdc4f81af3
 “
-java:S1874ˆ"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(Ó»×¶şÿÿÿÿ8À¶ªï„2J$b78d77ed-fe8c-4ab2-9aac-2652fe6383e3
+java:S1874ˆ"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(Ó»×¶şÿÿÿÿ8À¶ªï„2J$bcb43062-53f0-421e-8506-e795749963f2

@@ -85,12 +85,12 @@ public class AddExerciseActivity extends Activity {
         layout.setOrientation(LinearLayout.VERTICAL);
 
         final EditText weightInput = new EditText(this);
-        weightInput.setHint("운동 무게 (kg)");
+        weightInput.setHint("반복 횟수");
         weightInput.setInputType(InputType.TYPE_CLASS_NUMBER);
         layout.addView(weightInput);
 
         final EditText repsInput = new EditText(this);
-        repsInput.setHint("운동 회수");
+        repsInput.setHint("SET 수");
         repsInput.setInputType(InputType.TYPE_CLASS_NUMBER);
         layout.addView(repsInput);
 

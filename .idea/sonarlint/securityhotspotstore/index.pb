@@ -114,3 +114,11 @@ y
 Iapp/src/main/java/com/example/geofencetest/ChallengeViewEditActivity.java,0\d\0d7e150324abb429eaea76b30ff0d558c2f8c0ba
 u
 Eapp/src/main/java/com/example/geofencetest/ChallengeViewActivity.java,6\5\65f96ce3b5a90377547252cc1819712b3e070a10
+s
+Capp/src/main/java/com/example/geofencetest/AddExerciseActivity.java,7\4\74a04b12926ce751987c56c6fc9aacf00c3798eb
+{
+Kapp/src/main/java/com/example/geofencetest/community/CommunityActivity.java,b\d\bd944ff3daa74dd9c2b5ffe2abc9b28f1dfb9ba8
+n
+>app/src/main/java/com/example/geofencetest/community/Post.java,7\0\7097cb5bd0b5ae60c3f7690569b859da26d0305b
+u
+Eapp/src/main/java/com/example/geofencetest/community/PostAdapter.java,b\6\b6cddefe067bf679ffbb2ff5693a805bb181fd82

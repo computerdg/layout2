@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         Button bnt_community = (Button) findViewById(R.id.btn_community);
         Button btn_workout_log  = (Button) findViewById(R.id.btn_workout_log);
 
+
         // 운동
         btn_workout.setOnClickListener(new View.OnClickListener() {
             @Override

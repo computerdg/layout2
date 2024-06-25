@@ -32,6 +32,11 @@ public class MyPagerAdapter extends PagerAdapter {
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(layouts[position], container, false);
+
+        if (layouts[position] == R.layout.activity_start_chall) {
+            ((FlipperActivity) context).setupStartChall(view);
+        }
+
         container.addView(view);
         return view;
     }

@@ -17,15 +17,14 @@
         android:textStyle="bold"
         android:gravity="center"
         android:layout_marginBottom="15dp"/>-->
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:title="커뮤니티"
-        android:background="@drawable/box_background"
-        android:gravity="center"
-        android:titleTextColor="@android:color/black"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center"
+            android:background="?attr/colorPrimary"
+            app:titleTextColor="@android:color/black" />
 
 
     <LinearLayout

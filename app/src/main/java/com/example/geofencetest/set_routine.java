@@ -9,9 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import androidx.annotation.Nullable;
-
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
@@ -61,6 +59,7 @@ public class set_routine extends Activity {
                 saveRoutineExercisesToPreferences();
                 Intent mainIntent = new Intent(set_routine.this, MainActivity.class);
                 startActivity(mainIntent);
+                finish();
             }
         });
     }

@@ -33,6 +33,7 @@ public class CommunityActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("커뮤니티");
+        toolbar.setTitleTextColor(getResources().getColor(android.R.color.black));
 
         etPostContent = findViewById(R.id.etPostContent);
         btnPost = findViewById(R.id.btnPost);

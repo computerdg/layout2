@@ -38,6 +38,9 @@
             android:name=".ranking"
             android:exported="false" />
         <activity
+            android:name=".proto_analysis"
+            android:exported="false" />
+        <activity
             android:name=".challList_proto"
             android:exported="false" />
         <activity

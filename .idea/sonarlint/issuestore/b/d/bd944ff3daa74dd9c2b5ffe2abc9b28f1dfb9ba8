@@ -1,5 +1,7 @@
 
 i
-java:S16043"(Make this anonymous inner class a lambda(ˆ¢ûˆşÿÿÿÿJ$807a61bc-45f7-4915-846c-fa3d0694d001
+java:S16044"(Make this anonymous inner class a lambda(ˆ¢ûˆşÿÿÿÿJ$497c8076-7ba0-4389-89b0-dea6a93c7bf9
 —
-java:S1450"VRemove the "btnPost" field and declare it as a local variable in the relevant methods.(ğĞãùÿÿÿÿJ$2f4f331d-3550-4f6e-a95b-261489d08f9f
+java:S1450"VRemove the "btnPost" field and declare it as a local variable in the relevant methods.(ğĞãùÿÿÿÿJ$de0defa0-b725-43df-aaef-5267515b056b
+s
+java:S1874$"0Remove this use of "getColor"; it is deprecated.(â8Êê¢ó„2J$8f05888a-e76b-4c81-a69a-cc7b9a441f63

@@ -12,35 +12,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="8dp">
-
-        <Button
-            android:id="@+id/backButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="←"
-            android:textSize="18sp"
-            android:textColor="#000000"
-            android:background="?attr/selectableItemBackgroundBorderless" />
+        android:paddingBottom="8dp"
+        android:layout_margin="20dp">
 
         <TextView
             android:id="@+id/titleTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="루틴 설정"
-            android:textSize="18sp"
+            android:textSize="23dp"
+            android:textStyle="bold"
             android:textColor="#000000"
             android:layout_weight="1"
             android:gravity="center" />
 
-        <Button
-            android:id="@+id/completeButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="완료"
-            android:textSize="18sp"
-            android:textColor="#66d7d7"
-            android:background="?attr/selectableItemBackgroundBorderless" />
     </LinearLayout>
 
     <!-- 루틴 목록 -->
@@ -180,14 +165,16 @@
         android:orientation="horizontal">
 
         <!-- 생성 완료 버튼 -->
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_complete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="생성 완료"
             android:textSize="20sp"
+            android:textColor="@color/white"
             android:textStyle="bold"
-            android:backgroundTint="@android:color/holo_blue_light" />
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/custom_background" />
 
     </LinearLayout>
 

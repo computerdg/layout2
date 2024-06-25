@@ -112,13 +112,16 @@ public class check_currentLocation extends AppCompatActivity implements OnMapRea
                     Location.distanceBetween(location.getLatitude(), location.getLongitude(),
                             targetLatLng.latitude, targetLatLng.longitude, distance);
                     if (distance[0] <= RADIUS_IN_METERS) {
-                        Toast.makeText(check_currentLocation.this, "위치인증 성공!! 운동을 시작합니다.", Toast.LENGTH_SHORT).show();
-                        // 운동 정상 시작되면 오늘 루틴 페이지로 이동
-                        Intent intent = new Intent(getApplicationContext(), complete_todayWorkout.class);
+                        Toast.makeText(check_currentLocation.this, "⭐위치인증 성공!! 운동을 시작합니다.", Toast.LENGTH_SHORT).show();
+                        // 운동 정상 시작되면 루틴 체크하는 페이지로 이동
+                        Intent intent = new Intent(getApplicationContext(), routine_checkView.class);
                         startActivity(intent);
                         finish();
                     } else {
-                        Toast.makeText(check_currentLocation.this, "위치인증 실패: 지정한 헬스장으로 이동해주세요.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(check_currentLocation.this, "⛔위치인증 실패: 지정한 헬스장으로 이동 후 다시 인증해주세요.", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), challList_proto.class);
+                        startActivity(intent);
+                        finish();
                     }
                 } else {
                     Toast.makeText(check_currentLocation.this, "현재 위치를 확인할 수 없습니다.", Toast.LENGTH_SHORT).show();

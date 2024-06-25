@@ -17,6 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="다이어트 챌린지 분석 로그"
+            android:background="@drawable/note_background"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginBottom="16dp"

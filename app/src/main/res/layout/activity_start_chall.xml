@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".start_Routine"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:layout_margin="20dp">
 
     <TextView
         android:layout_width="match_parent"
@@ -17,7 +18,8 @@
         android:textStyle="bold"
         android:textSize="24sp"
         android:layout_marginBottom="30dp"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:background="@drawable/note_background"/>
 
     <!-- 챌린지 진행률 -->
     <TextView
@@ -33,7 +35,7 @@
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:progress="40"
         android:scaleY="5"
         android:max="100"/>
@@ -41,7 +43,7 @@
     <!-- 오늘의 루틴 -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         android:orientation="vertical"
         android:background="@drawable/box_background"
         android:padding="16dp"
@@ -55,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:text="오늘의 루틴"
-            android:textSize="20dp"
+            android:textSize="24dp"
             android:textStyle="bold"
             android:textColor="@android:color/black" />
 
@@ -63,10 +65,10 @@
         <TextView
             android:id="@+id/tv_routine_details"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="벤치프레스 10회 x 4set\n스쿼트 15회 x 5set\n케이블 푸쉬다운 10회 x 5set\n러닝 40분"
-            android:textSize="16dp"
-            android:background="#E0E0E0"
+            android:layout_height="200dp"
+            android:text="1️⃣ 벤치프레스 10회 x 4set\n2️⃣ 스쿼트 15회 x 5set\n️3️⃣ 케이블 푸쉬다운 10회 x 5set\n4️⃣ 러닝 40분"
+            android:textSize="20dp"
+            android:background="@drawable/box_background"
             android:padding="8dp"
             android:textColor="@android:color/black" />
     </LinearLayout>

@@ -3,16 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="20dp"
+    android:layout_margin="20dp">
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="다이어트 챌린지"
+        android:background="@drawable/note_background"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_gravity="center"
+        android:gravity="center"
         android:padding="16dp" />
 
     <LinearLayout
@@ -26,19 +28,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="운동 목표 : "
+            android:textSize="17dp"
             android:layout_marginEnd="4dp"/>
 
         <TextView
             android:id="@+id/tv_exercise_goal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="다이어트"/>
+            android:text="다이어트"
+            android:textSize="17dp"/>
     </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="챌린지 내용"
+        android:textSize="17dp"
         android:layout_marginTop="16dp"/>
 
     <TextView
@@ -54,6 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="지정 헬스장 위치"
+        android:textSize="17dp"
         android:layout_marginTop="24dp"/>
 
     <TextView
@@ -70,6 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="선택 요일"
+        android:textSize="17dp"
         android:layout_marginTop="24dp"/>
 
     <LinearLayout
@@ -86,7 +93,7 @@
             android:layout_weight="1"
             android:textOff="월"
             android:textOn="월"
-            android:background="@drawable/toggle_button_selector"
+            android:background="#B2EBF2"
             android:textColor="@android:color/black" />
 
         <ToggleButton
@@ -106,7 +113,7 @@
             android:layout_weight="1"
             android:textOff="수"
             android:textOn="수"
-            android:background="@drawable/toggle_button_selector"
+            android:background="#B2EBF2"
             android:textColor="@android:color/black" />
 
         <ToggleButton
@@ -126,7 +133,7 @@
             android:layout_weight="1"
             android:textOff="금"
             android:textOn="금"
-            android:background="@drawable/toggle_button_selector"
+            android:background="#B2EBF2"
             android:textColor="@android:color/black" />
 
         <ToggleButton
@@ -155,6 +162,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="챌린지 기간"
+        android:textSize="17dp"
         android:layout_marginTop="24dp"/>
 
     <TextView
@@ -162,6 +170,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="24년 06월 01일 ~ 24년 07월 01일"
+        android:textSize="17dp"
         android:layout_marginTop="8dp"/>
 
 </LinearLayout>

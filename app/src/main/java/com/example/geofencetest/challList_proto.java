@@ -35,7 +35,7 @@ public class challList_proto extends AppCompatActivity {
         });
 
 
-        // Null 챌린지로 넘어가서 챌린지 정보 볼수있게함
+        // 다이어트 챌린지 -> 챌린지 정보 볼수있게함
         btn_challInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

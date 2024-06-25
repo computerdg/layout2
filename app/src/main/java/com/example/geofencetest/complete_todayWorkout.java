@@ -25,8 +25,6 @@ public class complete_todayWorkout extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "루틴 완료 : 랭킹 포인트 5점 획득!", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
-
-
             }
         });
     }

@@ -1,7 +1,9 @@
 package com.example.geofencetest;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +13,8 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class set_routine extends Activity {
 
@@ -54,8 +58,8 @@ public class set_routine extends Activity {
         btnComplete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                saveRoutineExercisesToPreferences();
                 Intent intent = new Intent(set_routine.this, start_chall.class);
-                intent.putParcelableArrayListExtra("routineExercises", routineExercises);
                 startActivity(intent);
             }
         });
@@ -98,5 +102,16 @@ public class set_routine extends Activity {
                 layout.addView(textView);
             }
         }
+    }
+
+    private void saveRoutineExercisesToPreferences() {
+        SharedPreferences sharedPreferences = getSharedPreferences("RoutinePreferences", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        Set<String> exerciseSet = new HashSet<>();
+        for (AddExerciseActivity.Exercise exercise : routineExercises) {
+            exerciseSet.add(exercise.getName() + "," + exercise.getWeight() + "," + exercise.getReps());
+        }
+        editor.putStringSet("routineExercises", exerciseSet);
+        editor.apply();
     }
 }

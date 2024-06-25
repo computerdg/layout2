@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:layout_margin="10dp">
+    android:layout_margin="20dp">
 
     <!--<SearchView
         android:id="@+id/place_search"

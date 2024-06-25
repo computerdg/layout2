@@ -1,13 +1,17 @@
 package com.example.geofencetest;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
-import java.util.ArrayList;
+import java.util.Set;
 
 public class start_chall extends Activity {
 
@@ -20,22 +24,41 @@ public class start_chall extends Activity {
 
         tvRoutineDetails = findViewById(R.id.tv_routine_details);
 
-        Intent intent = getIntent();
-        ArrayList<AddExerciseActivity.Exercise> routineExercises = intent.getParcelableArrayListExtra("routineExercises");
-        if (routineExercises != null) {
-            displayRoutine(routineExercises);
+        loadRoutineExercisesFromPreferences();
+
+        Button btn_startRoutine = findViewById(R.id.btn_startRoutine);
+
+
+        // 운동 시작하기 버튼
+        btn_startRoutine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), check_currentLocation.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void loadRoutineExercisesFromPreferences() {
+        SharedPreferences sharedPreferences = getSharedPreferences("RoutinePreferences", Context.MODE_PRIVATE);
+        Set<String> exerciseSet = sharedPreferences.getStringSet("routineExercises", null);
+        if (exerciseSet != null) {
+            displayRoutine(exerciseSet);
         }
     }
 
-    private void displayRoutine(ArrayList<AddExerciseActivity.Exercise> exercises) {
+    private void displayRoutine(Set<String> exercises) {
         StringBuilder details = new StringBuilder();
-        for (AddExerciseActivity.Exercise exercise : exercises) {
-            details.append(exercise.getName())
-                    .append(" - ")
-                    .append(exercise.getWeight())
-                    .append("kg x ")
-                    .append(exercise.getReps())
-                    .append("회\n");
+        for (String exercise : exercises) {
+            String[] parts = exercise.split(",");
+            if (parts.length == 3) {
+                details.append(parts[0])
+                        .append(" - ")
+                        .append(parts[1])
+                        .append("kg x ")
+                        .append(parts[2])
+                        .append("회\n");
+            }
         }
         tvRoutineDetails.setText(details.toString());
     }

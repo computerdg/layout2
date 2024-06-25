@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:layout_margin="20dp">
 
     <!-- Routine Title -->
     <TextView
@@ -15,7 +16,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:background="#E0E0E0"
+        android:background="@drawable/note_background"
         android:padding="12dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="16dp"/>

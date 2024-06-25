@@ -1,5 +1,17 @@
 
+k
+java:S1604%"(Make this anonymous inner class a lambda(Àµ§š8¡úşî„2J$3c4fe1f9-d4e3-4d17-9386-0bc36062bc60
+k
+java:S1604,"(Make this anonymous inner class a lambda(÷ªÏü8¡úşî„2J$4b7a19fb-e4d1-4b34-a070-ee989f320c4a
 p
-java:S1604"(Make this anonymous inner class a lambda(Ñè„úÿÿÿÿ8¸©ëƒ2J$2bed8aa2-6b70-4bf6-b2ab-cb59d8eefb08
-	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ƒ…òÛ8½©ëƒ2J$b883d46e-adb7-4e1c-834c-18639ef1e599
-˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êê¦„üÿÿÿÿ8½©ëƒ2J$9380c3ff-3af8-4eb9-8802-a2252b72b602
+java:S16043"(Make this anonymous inner class a lambda(£á¤’ûÿÿÿÿ8¡úşî„2J$67abd541-e0e4-45bf-8d11-6a1626525c65
+k
+java:S1604:"(Make this anonymous inner class a lambda(ßàÔï8¡úşî„2J$c4b191bc-2a65-48b9-bc27-6c03f75bd9ed
+	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ÖÏ¬8¢úşî„2J$7ee314bf-bfdd-4665-8503-b88ae7997f29
+—
+java:S1659"TDeclare "wednesdayExerciseLayout" and all following declarations on a separate line.(ÎÉ˜¬8§úşî„2J$870511c3-45ed-4893-8501-4a4f0086e862
+
+java:S1450"ZRemove the "btnComplete" field and declare it as a local variable in the relevant methods.(Æë¥8§úşî„2J$73b2585a-3018-4f3d-9b21-c8ee7e6f8197
+†
+java:S1874M"CRemove this use of "getParcelableArrayListExtra"; it is deprecated.(ªà¹Â8½úşî„2J$acb39f8e-fe69-48ec-a906-8be164076165
+i	java:S131W""Add a default case to this switch.(ì»¾úÿÿÿÿ8¾úşî„2J$5b0d0879-8ec9-421d-834d-1c988a520a04

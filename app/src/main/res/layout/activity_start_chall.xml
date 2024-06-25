@@ -64,7 +64,7 @@
             android:id="@+id/tv_routine_details"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="벤치프레스 15회 x 5set\n케이블 푸쉬다운 10회 x 4set\n러닝 40분"
+            android:text="벤치프레스 10회 x 4set\n스쿼트 15회 x 5set\n케이블 푸쉬다운 10회 x 5set\n러닝 40분"
             android:textSize="16dp"
             android:background="#E0E0E0"
             android:padding="8dp"

@@ -40,7 +40,7 @@
             android:layout_height="120dp"
             android:layout_marginBottom="25dp"
             android:background="@drawable/rounded_button02"
-            android:text="챌린지 미지정"
+            android:text="다이어트 챌린지"
             android:textSize="20dp" />
 
 

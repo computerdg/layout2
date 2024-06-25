@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    tools:context=".ExerciseDiary.ExerciseDiaryActivity"
     android:padding="16dp">
 
     <!-- Title -->
@@ -65,6 +66,22 @@
                 android:paddingTop="12dp"
                 android:paddingBottom="12dp"
                 android:layout_marginBottom="16dp"/>
+
+            <!-- Delete Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="삭제"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:background="#FF5252"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone"/>
 
             <!-- Journal Entry Display -->
             <TextView

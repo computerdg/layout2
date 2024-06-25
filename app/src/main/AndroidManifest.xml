@@ -50,7 +50,7 @@
             android:name=".check_currentLocation"
             android:exported="false" />
         <activity
-            android:name=".ExerciseDiaryActivity"
+            android:name=".ExerciseDiary.ExerciseDiaryActivity"
             android:exported="false" />
         <activity
             android:name=".start_Routine"

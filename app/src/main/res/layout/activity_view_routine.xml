@@ -42,7 +42,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="푸쉬업"
+            android:text="벤치프레스"
             android:padding="8dp"
             android:gravity="center_vertical"/>
 
@@ -63,7 +63,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="가슴"
+            android:text="하체"
             android:background="#B2EBF2"
             android:padding="8dp"
             android:gravity="center"/>
@@ -72,7 +72,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="케이블 크로스"
+            android:text="스쿼트"
             android:padding="8dp"
             android:gravity="center_vertical"/>
 
@@ -93,7 +93,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="이두"
+            android:text="삼두"
             android:background="#B2EBF2"
             android:padding="8dp"
             android:gravity="center"/>
@@ -102,7 +102,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="덤벨컬"
+            android:text="케이블 푸쉬다운"
             android:padding="8dp"
             android:gravity="center_vertical"/>
 
@@ -124,7 +124,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="이두"
+            android:text="유산소"
             android:background="#B2EBF2"
             android:padding="8dp"
             android:gravity="center"/>
@@ -133,7 +133,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="케이블 컬"
+            android:text="러닝"
             android:padding="8dp"
             android:gravity="center_vertical"/>
 

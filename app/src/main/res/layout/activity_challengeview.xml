@@ -10,7 +10,7 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="챌린지 제목 1"
+        android:text="다이어트 챌린지"
         android:textSize="20sp"
         android:layout_gravity="center"
         android:padding="16dp" />
@@ -36,7 +36,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="펙덱 플라이"
+                android:text="벤치 프레스"
                 android:textSize="18sp" />
 
             <TextView
@@ -64,7 +64,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="시티드 케이블 로우"
+                android:text="스쿼트"
                 android:textSize="18sp" />
 
             <TextView
@@ -77,7 +77,60 @@
                 android:clickable="true"
                 android:focusable="true" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/exercise_3_container">
+
+            <TextView
+                android:id="@+id/exercise_3_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="케이블 푸쉬다운"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/edit_button_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="..."
+                android:textSize="18sp"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/exercise_4_container">
+
+            <TextView
+                android:id="@+id/exercise_4_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="러닝"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/edit_button_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="..."
+                android:textSize="18sp"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
     </LinearLayout>
+
 
     <android.widget.Button
         android:id="@+id/complete_button"

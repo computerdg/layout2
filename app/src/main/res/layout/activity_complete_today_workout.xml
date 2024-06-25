@@ -46,7 +46,7 @@
             android:id="@+id/dateTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="챌린지 도전 24일차"
+            android:text="챌린지 도전 26일차"
             android:textSize="20dp"
             android:textStyle="bold"
             android:textColor="#03A9F4"

@@ -9,7 +9,7 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="챌린지 제목"
+        android:text="다이어트 챌린지"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_gravity="center"
@@ -32,7 +32,7 @@
             android:id="@+id/tv_exercise_goal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NULL"/>
+            android:text="다이어트"/>
     </LinearLayout>
 
     <TextView
@@ -45,7 +45,7 @@
         android:id="@+id/tv_challenge_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="..."
+        android:text="운동을 통한 건강한 다이어트"
         android:layout_marginTop="8dp"
         android:background="#E0E0E0"
         android:padding="16dp"/>
@@ -161,7 +161,7 @@
         android:id="@+id/tv_period"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="00년 00월 00일 ~ 00년 00월 00일"
+        android:text="24년 06월 01일 ~ 24년 07월 01일"
         android:layout_marginTop="8dp"/>
 
 </LinearLayout>

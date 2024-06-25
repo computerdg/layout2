@@ -1,5 +1,5 @@
-package com.example.geofencetest;
-// ExerciseJournalActivity.java
+package com.example.geofencetest.ExerciseDiary;
+
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -12,12 +12,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import com.example.geofencetest.R;
+
 public class ExerciseDiaryActivity extends AppCompatActivity {
 
     private CalendarView calendarView;
     private ScrollView scrollView;
     private EditText etJournalEntry;
     private AppCompatButton btnSave;
+    private AppCompatButton btnDelete;
     private TextView tvJournalDisplay;
     private String selectedDate = "";
 
@@ -32,6 +35,7 @@ public class ExerciseDiaryActivity extends AppCompatActivity {
         scrollView = findViewById(R.id.scrollView);
         etJournalEntry = findViewById(R.id.et_journal_entry);
         btnSave = findViewById(R.id.btn_save);
+        btnDelete = findViewById(R.id.btn_delete);
         tvJournalDisplay = findViewById(R.id.tv_journal_display);
 
         sharedPreferences = getSharedPreferences("ExerciseJournal", MODE_PRIVATE);
@@ -56,11 +60,23 @@ public class ExerciseDiaryActivity extends AppCompatActivity {
                 Toast.makeText(ExerciseDiaryActivity.this, "운동일지가 저장되었습니다.", Toast.LENGTH_SHORT).show();
             }
         });
+
+        btnDelete.setOnClickListener(v -> {
+            deleteJournalEntry();
+            displayJournalEntry();
+            Toast.makeText(ExerciseDiaryActivity.this, "운동일지가 삭제되었습니다.", Toast.LENGTH_SHORT).show();
+        });
     }
 
     private void saveJournalEntry(String journalEntry) {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(selectedDate, journalEntry);
+        editor.apply();
+    }
+
+    private void deleteJournalEntry() {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.remove(selectedDate);
         editor.apply();
     }
 
@@ -71,10 +87,12 @@ public class ExerciseDiaryActivity extends AppCompatActivity {
             tvJournalDisplay.setVisibility(View.VISIBLE);
             etJournalEntry.setVisibility(View.GONE);
             btnSave.setVisibility(View.GONE);
+            btnDelete.setVisibility(View.VISIBLE);
         } else {
             tvJournalDisplay.setVisibility(View.GONE);
             etJournalEntry.setVisibility(View.VISIBLE);
             btnSave.setVisibility(View.VISIBLE);
+            btnDelete.setVisibility(View.GONE);
             etJournalEntry.setText("");
         }
     }

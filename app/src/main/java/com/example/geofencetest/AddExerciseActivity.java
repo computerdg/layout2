@@ -121,7 +121,7 @@ public class AddExerciseActivity extends Activity {
 
     private void displaySelectedExercise(Exercise exercise) {
         TextView textView = new TextView(this);
-        textView.setText(exercise.getName() + " - " + exercise.getWeight() + "kg x " + exercise.getReps() + "회");
+        textView.setText(exercise.getName() + " - " + exercise.getWeight() + "회 x " + exercise.getReps() + "세트");
         selectedItemsLayout.addView(textView);
     }
 

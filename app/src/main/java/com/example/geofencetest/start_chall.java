@@ -52,9 +52,9 @@ public class start_chall extends Activity {
                 details.append(parts[0])
                         .append(" - ")
                         .append(parts[1])
-                        .append("kg x ")
+                        .append("회 x ")
                         .append(parts[2])
-                        .append("회\n");
+                        .append("세트\n");
             }
         }
         tvRoutineDetails.setText(details.toString());

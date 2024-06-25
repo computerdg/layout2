@@ -33,9 +33,9 @@ public class start_Routine extends Activity {
             details.append(exercise.getName())
                     .append(" - ")
                     .append(exercise.getWeight())
-                    .append("kg x ")
+                    .append("회 x ")
                     .append(exercise.getReps())
-                    .append("회\n");
+                    .append("세트\n");
         }
         tvRoutineDetails.setText(details.toString());
     }

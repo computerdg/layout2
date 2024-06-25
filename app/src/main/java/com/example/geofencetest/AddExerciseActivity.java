@@ -20,6 +20,8 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class AddExerciseActivity extends Activity {
 
@@ -28,6 +30,8 @@ public class AddExerciseActivity extends Activity {
     private Button completeButton, closeButton;
     private ArrayList<Exercise> selectedExercises;
     private String selectedExerciseName;
+
+    private Map<String, String[]> exercisesMap;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -41,21 +45,10 @@ public class AddExerciseActivity extends Activity {
         closeButton = findViewById(R.id.closeButton);
         selectedExercises = new ArrayList<>();
 
-        // 예시 데이터
-        String[] categories = {"가슴", "등", "다리"};
-        String[] exercises = {"벤치프레스", "랫풀다운", "스쿼트"};
-
-        ArrayAdapter<String> categoryAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, categories);
-        categoryListView.setAdapter(categoryAdapter);
-
-        ArrayAdapter<String> exerciseAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, exercises);
-        exerciseListView.setAdapter(exerciseAdapter);
-
-        exerciseListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                selectedExerciseName = (String) parent.getItemAtPosition(position);
-                showInputDialog();
+            public void onClick(View v) {
+                finish();
             }
         });
 
@@ -69,10 +62,43 @@ public class AddExerciseActivity extends Activity {
             }
         });
 
-        closeButton.setOnClickListener(new View.OnClickListener() {
+        setupCategoryListView();
+    }
+
+    private void setupCategoryListView() {
+        String[] categories = {"가슴", "등", "하체", "어깨", "삼두", "코어", "유산소"};
+        ArrayAdapter<String> categoryAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, categories);
+        categoryListView.setAdapter(categoryAdapter);
+
+        exercisesMap = new HashMap<>();
+        exercisesMap.put("가슴", new String[]{"펙덱 플라이", "니 푸쉬업", "인클라인 벤치프레스"});
+        exercisesMap.put("등", new String[]{"랫풀다운", "바벨 로우", "풀업"});
+        exercisesMap.put("하체", new String[]{"스쿼트", "레그 프레스", "런지"});
+        exercisesMap.put("어깨", new String[]{"숄더 프레스", "사이드 레터럴 레이즈", "프론트 레이즈"});
+        exercisesMap.put("삼두", new String[]{"트라이셉스 익스텐션", "덤벨 킥백", "케이블 푸쉬다운"});
+        exercisesMap.put("코어", new String[]{"크런치", "플랭크", "레그 레이즈"});
+        exercisesMap.put("유산소", new String[]{"러닝", "싸이클", "로잉"});
+
+        categoryListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
-                finish();
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String selectedCategory = categories[position];
+                setupExerciseListView(selectedCategory);
+            }
+        });
+    }
+
+    private void setupExerciseListView(String category) {
+        String[] exercises = exercisesMap.get(category);
+
+        ArrayAdapter<String> exerciseAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, exercises);
+        exerciseListView.setAdapter(exerciseAdapter);
+
+        exerciseListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                selectedExerciseName = exercises[position];
+                showInputDialog();
             }
         });
     }

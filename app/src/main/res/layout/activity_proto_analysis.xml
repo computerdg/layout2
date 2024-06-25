@@ -134,7 +134,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="운동 시간 : 1시간 34분"
+                    android:text="운동 시간 : 50분"
                     android:textSize="16sp"
                     android:layout_marginBottom="4dp"
                     android:textColor="@android:color/black" />
@@ -142,15 +142,15 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="소모 칼로리 : 640kcal"
-                    android:textSize="16sp"
                     android:layout_marginBottom="4dp"
-                    android:textColor="@android:color/black" />
+                    android:text="소모 칼로리 : 400kcal"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="획득 포인트 : + 5 points"
+                    android:text="획득 포인트 : + 3 points"
                     android:textSize="16sp"
                     android:textColor="@android:color/black" />
             </LinearLayout>
@@ -175,7 +175,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="80%"
+                    android:text="60%"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black" />
@@ -212,7 +212,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="운동 시간 : 1시간 34분"
+                    android:text="운동 시간 : 0분"
                     android:textSize="16sp"
                     android:layout_marginBottom="4dp"
                     android:textColor="@android:color/black" />
@@ -220,7 +220,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="소모 칼로리 : 640kcal"
+                    android:text="소모 칼로리 : 0kcal"
                     android:textSize="16sp"
                     android:layout_marginBottom="4dp"
                     android:textColor="@android:color/black" />
@@ -228,7 +228,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="획득 포인트 : + 5 points"
+                    android:text="획득 포인트 : + 0 points"
                     android:textSize="16sp"
                     android:textColor="@android:color/black" />
             </LinearLayout>
@@ -282,7 +282,15 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="운동 시간 : 1시간 34분"
+                    android:layout_marginBottom="4dp"
+                    android:text="운동 시간 : 1시간 12분"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="소모 칼로리 : 520kcal"
                     android:textSize="16sp"
                     android:layout_marginBottom="4dp"
                     android:textColor="@android:color/black" />
@@ -290,15 +298,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="소모 칼로리 : 640kcal"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="4dp"
-                    android:textColor="@android:color/black" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="획득 포인트 : + 5 points"
+                    android:text="획득 포인트 : + 4 points"
                     android:textSize="16sp"
                     android:textColor="@android:color/black" />
             </LinearLayout>
@@ -323,7 +323,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="90%"
+                    android:text="80%"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black" />

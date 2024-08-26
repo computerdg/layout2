@@ -13,6 +13,7 @@
         android:text="오늘도 고생하셨습니다 !"
         android:textSize="24sp"
         android:textColor="#000000"
+        android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"/>
 
@@ -36,7 +37,7 @@
         android:layout_below="@id/subtitleTextView"
         android:layout_marginTop="16dp"
         android:padding="16dp"
-        android:background="#E5F7FE"
+        android:background="@drawable/note_background"
         android:elevation="4dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp">
@@ -46,7 +47,7 @@
             android:id="@+id/dateTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="챌린지 도전 26일차"
+            android:text="D + 82"
             android:textSize="20dp"
             android:textStyle="bold"
             android:textColor="#03A9F4"

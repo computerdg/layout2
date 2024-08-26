@@ -1,12 +1,0 @@
-
-n	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Î‹úúÿÿÿÿ8µ¦Äúƒ2
-ˆ
-java:S26370"EThis method's return value is marked "@NonNull" but null is returned.(¥¹ï8©Ä»úƒ2J$00008df9-fbc0-4d98-8aba-9cb251c94d24
-›
-java:S1450"XRemove the "tabLayout" field and declare it as a local variable in the relevant methods.(¤×ä8ÿ¡Ëùƒ2J$e9292ba9-1e8a-4c4f-8134-02938a1a9b90
- 
-java:S1450"XRemove the "viewPager" field and declare it as a local variable in the relevant methods.(åÙ¬Ïûÿÿÿÿ8ÿ¡Ëùƒ2J$79d86e27-3935-484f-bf69-4e011d8cd085
-~
-java:S1874"<Remove this use of "FragmentPagerAdapter"; it is deprecated.(¯Õßu8Œ¢Ëùƒ2J$015c3253-e01c-4d5f-a6b8-4c707df22b28
-p
-java:S1874#".Remove this use of "<init>"; it is deprecated.(‘í›\8¢Ëùƒ2J$26b40892-2201-4114-ab1f-ca85bb69e37f

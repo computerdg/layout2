@@ -60,6 +60,7 @@
         android:layout_height="wrap_content"
         android:text="지정 헬스장 위치"
         android:textSize="17dp"
+        android:textColor="#8EE6D1"
         android:layout_marginTop="24dp"/>
 
     <TextView

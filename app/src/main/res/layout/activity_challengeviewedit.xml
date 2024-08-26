@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:text="벤치프레스"
         android:textSize="20sp"
+        android:textColor="#5882FA"
         android:layout_gravity="center"
         android:padding="16dp" />
 

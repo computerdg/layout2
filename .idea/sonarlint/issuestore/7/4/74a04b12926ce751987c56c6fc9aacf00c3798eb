@@ -1,23 +1,23 @@
 
-c
-java:S16046"(Make this anonymous inner class a lambda(²¶ù1J$c6a78430-ad67-42a0-90e4-8c3e3f194dc6
-i
-java:S1604>"(Make this anonymous inner class a lambda(ğ«øÿÿÿÿJ$59ddf44c-c49c-4331-85ad-b464809c68c6
-c
-java:S1604H"(Make this anonymous inner class a lambda(ÍäÿCJ$8136b198-c3e6-46e5-8d6d-55ba0b34f98e
-d
-java:S1604c"(Make this anonymous inner class a lambda(±€çëJ$2fb3d3a9-9f93-4cf5-b15a-42875e5c6db5
-d
-java:S1604p"(Make this anonymous inner class a lambda(Æ­ÜJ$918d3827-a5bf-435b-b542-a8ecfb22e1f6
-o
-java:S1659".Declare "exerciseListView" on a separate line.(íñ‘«şÿÿÿÿJ$0ec68817-2059-48dc-b87b-1817a946b06c
-e
-java:S1659")Declare "closeButton" on a separate line.(ŞâJ$d67acd02-5afe-4743-bf2b-a251a2bd95e0
+k
+java:S1604>"(Make this anonymous inner class a lambda(Öºªƒ8Îú¬ö„2J$484218f8-82bb-416d-b78d-38d037e38892
+j
+java:S1604H"(Make this anonymous inner class a lambda(²¶ù18Ïú¬ö„2J$301e9653-a57e-47f4-af62-43aa70032617
+p
+java:S1604P"(Make this anonymous inner class a lambda(ğ«øÿÿÿÿ8Ïú¬ö„2J$40447a2f-aa98-4799-9733-87d0241fc9e1
+j
+java:S1604Z"(Make this anonymous inner class a lambda(ÍäÿC8Ïú¬ö„2J$3fdaa445-98d6-448b-9f60-b70a6f00ba1b
+k
+java:S1604u"(Make this anonymous inner class a lambda(±€çë8Ïú¬ö„2J$2acea052-c8a1-4d9e-9bee-b6ea1799648a
+l
+java:S1604‚"(Make this anonymous inner class a lambda(Æ­Ü8Ïú¬ö„2J$e4b3a0fb-4401-4399-a6f8-e5f8a56da34a
+v
+java:S1659".Declare "exerciseListView" on a separate line.(íñ‘«şÿÿÿÿ8Õú¬ö„2J$21f6ce01-92d4-47ba-b956-b15d7d4d238a
+l
+java:S1659")Declare "closeButton" on a separate line.(Şâ8Õú¬ö„2J$88ec402c-c0a1-44d7-8326-860165476571
+§
+java:S1450"_Remove the "categoryListView" field and declare it as a local variable in the relevant methods.(íñ‘«şÿÿÿÿ8Õú¬ö„2J$246050bc-c468-45f5-9508-f5ff7931787e
+
+java:S1450"ZRemove the "closeButton" field and declare it as a local variable in the relevant methods.(Şâ8Õú¬ö„2J$a6ceb1ec-be7f-4e45-9e32-dc3ac2dadf47
  
-java:S1450"_Remove the "categoryListView" field and declare it as a local variable in the relevant methods.(íñ‘«şÿÿÿÿJ$177a7dec-7da1-4e8e-87fb-1b99cc742951
-–
-java:S1450"ZRemove the "closeButton" field and declare it as a local variable in the relevant methods.(ŞâJ$3a570634-3210-42d6-8111-f066bdc0d564
-™
-java:S1450"]Remove the "completeButton" field and declare it as a local variable in the relevant methods.(ŞâJ$5377d17f-3411-4088-a149-cb43c63d5615
- 
-java:S1450"_Remove the "exerciseListView" field and declare it as a local variable in the relevant methods.(íñ‘«şÿÿÿÿJ$60589504-ea50-4726-859c-d9822ff47777
+java:S1450"]Remove the "completeButton" field and declare it as a local variable in the relevant methods.(Şâ8Öú¬ö„2J$3bd8e2a5-e56e-4c17-a331-c4f87722a1a6

@@ -16,6 +16,40 @@
         android:theme="@style/Theme.GeofenceTest"
         tools:targetApi="31">
         <activity
+            android:name=".group_start02"
+            android:exported="false" />
+        <activity
+            android:name=".group_lock"
+            android:exported="false" />
+        <activity
+            android:name=".quit_hb04"
+            android:exported="false" />
+        <activity
+            android:name=".quit_hb03"
+            android:exported="false" />
+        <activity
+            android:name=".quit_hb02"
+            android:exported="false" />
+        <activity
+            android:name=".quit_hb_01"
+            android:exported="false" />
+        <activity
+            android:name=".make_routine03"
+            android:exported="false" />
+        <activity
+            android:name=".make_routine02"
+            android:exported="false" />
+        <activity
+            android:name=".makeRoutine01"
+            android:exported="false" />
+        <activity
+            android:name=".choicePage"
+            android:exported="false" />
+        <activity
+            android:name=".choice"
+            android:exported="false"
+            android:label="@string/title_activity_choice" />
+        <activity
             android:name=".timer"
             android:exported="false" />
         <activity
@@ -83,7 +117,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value=""/>
+            android:value="" />
     </application>
 
 </manifest>

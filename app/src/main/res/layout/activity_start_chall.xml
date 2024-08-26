@@ -14,31 +14,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="다이어트 챌린지"
+        android:text="8월 20일 화요일"
         android:textStyle="bold"
         android:textSize="24sp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/note_background"/>
 
-    <!-- 챌린지 진행률 -->
     <TextView
-        android:id="@+id/tv_progress_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="챌린지 진행률"
-        android:textSize="20dp"
-        android:layout_marginBottom="8dp"/>
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:progress="40"
-        android:scaleY="5"
-        android:max="100"/>
+        android:text="D + 82"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center" />
 
     <!-- 오늘의 루틴 -->
     <LinearLayout
@@ -49,14 +38,15 @@
         android:padding="16dp"
         android:gravity="center"
         android:layout_marginBottom="16dp"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="30dp">
 
         <TextView
             android:id="@+id/tv_routine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:text="오늘의 루틴"
+            android:layout_gravity="left"
+            android:text="월요일"
             android:textSize="24dp"
             android:textStyle="bold"
             android:textColor="@android:color/black" />

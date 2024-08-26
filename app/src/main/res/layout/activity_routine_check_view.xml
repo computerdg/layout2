@@ -129,7 +129,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#E0E0E0"
+        android:background="#ffffff"
         android:padding="8dp"
         android:layout_marginBottom="16dp">
 
@@ -159,7 +159,7 @@
             android:layout_height="wrap_content"/>
     </LinearLayout>
 
-    <!-- Feedback Memo -->
+<!--    &lt;!&ndash; Feedback Memo &ndash;&gt;
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -175,7 +175,7 @@
         android:background="#E0E0E0"
         android:padding="10dp"
         android:gravity="top|start"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"/>-->
 
     <!-- Search Equipment Button -->
     <LinearLayout
